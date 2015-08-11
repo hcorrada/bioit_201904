@@ -185,6 +185,7 @@ Prediction of _suspect_ vs. _pathological_ fetal CTG data (*not genomics*)
 ###Acknowledgements
 **Wikum Dinalankara**: (formerly) Ph.D. student @ U. Maryland (now postdoc @ Johns Hopkins)  
 **Nick Thieme**: Ph.D. student @ U. Maryland  
+Jeff Leek, Rafael A. Irizarry, Andy Feinberg  
 
 ###References
 Corrada Bravo, et al. (2012) _BMC Bioinformatics_.  
