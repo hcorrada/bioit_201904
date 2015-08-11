@@ -1,7 +1,10 @@
 ---
 title: "Gene expression antiprofiles"
 subtitle: "Addressing reproducibility in genomic signatures by characterizing variance and estimation stability"
-author: Héctor Corrada Bravo
+author: |
+  Héctor Corrada Bravo   
+  Center for Bioinformatics and Computational Biology  
+  University of Maryland, College Park  
 date: August 11 2015
 output: 
   ioslides_presentation:
