@@ -61,6 +61,14 @@ Prediction in leave-one-tissue out experiment
 
 Anti-profile score distinguishes between stages in tumor progression
 
+## Gene Expression Anti-profiles
+
+<div class="centered">
+<img src="img/progression_meth.png" style="max-height: 80%; max-width: 80%"/>
+</div>
+
+DNA methylation anti-profiles score distinguishes between stages in tumor progression
+
 ## Gene Expression Anti-profiles 
 
 <div class="centered">
@@ -148,7 +156,9 @@ $\tilde{K}=K_s K_n^{-1} K_s$
 
 ## Stability and accuracy of Anomaly SVM 
 
+<div class="centered">
 ![](img/asvm_lung.png)
+</div>
 
 Prediction of high vs. low relapse risk in lung cancer 
 
