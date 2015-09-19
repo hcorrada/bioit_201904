@@ -1,0 +1,212 @@
+## R/Bioconductor
+
+<div class="centered">
+<img src="img/rbioc.png" style="max-height: 70%; max-width: 70%"/>
+</div>
+
+- State-of-the-art computational and statistical analysis
+platform
+- We develop and apply methods for these analyses in this platform
+- Our collaborators take part in analysis in this platform
+
+## What we wanted
+
+> - Data transformation and modeling: data smoothing, region finding (R/Bioconductor: `Bsmooth`, `minfi`)
+> - Genome browsing: search by gene, search by overlap
+> - Region analysis: overlap with other data (our own, other labs, UCSC, ensembl)
+> - Regulation: expression data (Gene Expression Barcode)
+
+## Genomic Data Science! 
+
+- We have entered the era of data analysis
+- Epigenomics roadmap, Encode, TCGA, ...
+- *We have unprecedented ability to measure*
+- *and lots of publicly available data to contextualize it*
+
+<div class="centered">
+<img src="img/hadley.png" style="max-height: 50%; max-width: 50%"/>
+<img src="img/hadley2.png" style="max-height: 30%; max-width: 30%"/>
+<footer class="source">[H. Wickham]</footer>
+</div>
+
+---
+
+<div class="centered">
+<img src="img/epiviz_2_logo_medium.png" style="max-height: 40%; max-width: 40%"/>
+</div>
+
+### Integrative, visual and computational exploratory analysis of genomic data
+
+<img src="img/florin_chelaru.jpg"/>
+Florin Chelaru, UMD
+
+Chelaru, et al. Nature Methods, 2014.
+
+[The old way](http://prezi.com/ddvaav72s_3k/?utm_campaign=share&utm_medium=copy&rc=ex0share)
+
+---
+
+<div class="centered">
+<img src="img/epiviz_2_logo_medium.png" style="max-height: 40%; max-width: 40%"/>
+</div>
+
+### Integrative, visual and computational exploratory analysis of genomic data
+
+- Browser-based
+- Interactive
+- Integration of data
+- Reproducible dissemination
+- Communication with R/Bioconductor: `epivizr` package
+
+e.g.: http://epiviz.cbcb.umd.edu/2?ws=45KBV4C7z3u
+<footer class="source">[Nat. Methods, 2014]</footer>
+
+---
+
+<iframe data-src="http://epiviz.cbcb.umd.edu/?ws=W3ieGz19icm" width="99%"></iframe>
+
+---
+
+## Communication with R/Bioc
+
+Using the `epivizr` package
+
+- Setup up an `epivizr` session
+
+```r
+mgr <- startEpiviz(workspace="qyOTB6vVnff")
+```
+
+- Calculate a statistic of interest
+
+```r
+# Get tumor methylation base-pair data
+m <- assay(se)[,"tumor"]
+
+# Compute regions with highest variability across cpgs
+region_stat <- calcWindowStat(m, step=25, window=80, stat=rowSds)
+s <- region_stat[,"stat"]
+```
+
+--- 
+
+## Communication with R/Bioc
+
+Using the `epivizr` package: browse by regions of interest.
+
+- What's around the regions with highest across CpG variability
+
+```r
+# get locations in decreasing order
+o <- order(s, decreasing=TRUE)
+indices <- region_stat[o, "indices"]
+slideShowRegions <- rowRanges(se)[indices] + 1250000L
+mgr$slideshow(slideShowRegions)
+```
+
+## Plugins, plugins, plugins
+
+Our architecture is *dynamically extensible*. We can easily integrate new data types and add new visualizations.
+
+Example: adding a new visualization
+
+see: https://gist.github.com/11017650
+
+---
+
+http://epiviz.cbcb.umd.edu/?gist[]=11017650&ws=Y8kWxCO2Ajn
+<iframe data-src="http://epiviz.cbcb.umd.edu/2/?gist[]=11017650&ws=Y8kWxCO2Ajn"></iframe>
+
+
+## Plugins, plugins, plugins
+
+<iframe data-src="http://epiviz.github.io"></iframe>
+
+# Datatypes
+
+<div class="centered">
+<img src="img/datatypes.png" style="max-width=50%; min-width=50%"/>
+</div>
+
+- Based on classic "three-table" design in genomic data analysis
+- **Data providers define coordinate space**
+
+---
+
+http://epiviz.cbcb.umd.edu/?ws=SRHZlWRRAPd&gist[]=a82a998817564ce3fe48&settings=default&
+<iframe data-src="http://epiviz.cbcb.umd.edu/2/?ws=SRHZlWRRAPd&gist[]=a82a998817564ce3fe48&settings=default&"></iframe>
+
+## Analysis era
+
+<div class="centered">
+<img src="img/hadley.png" style="max-height: 50%; max-width: 50%"/>
+<img src="img/hadley2.png" style="max-height: 30%; max-width: 30%"/>
+<footer class="source">[H. Wickham]</footer>
+</div>
+
+One interpretation of *Big Data* is *Many relevant sources of contextual data*
+
+- Easily access/integrate *contextual* data
+- Driven by exploratory analysis of *immediate* data
+- Iterative process
+- Visual and computational exploration go hand in hand
+
+## Visualization goals
+
+- Context 
+- Integrate and align multiple data sources; navigate; search
+- *Connect*: brushing
+- *Encode*: map visualization properties to data on the fly
+- *Reconfigure*: multiple views of the same data
+
+<footer class="source">[Perer & Shneiderman]</footer>
+
+## Visualization goals
+
+- Data
+- *Select and filter*: tight-knit integration with R/Bioconductor; 
+- (future) filters on visualization propagate to data environment
+- Model
+- New 'measurements' the result of modeling; perhaps suggested by data context
+
+<footer class="source">[Perer & Shneiderman]</footer>
+
+## Creativity in exploration
+
+We are building a software system to support creative exploratory analysis of epigenome-wide datasets...
+
+<div class="centered">
+<img src="images/terry.png" style="max-height: 60%; max-width: 60%"/>
+</div>
+<footer class="source">[T. Speed]</footer>
+
+## Creativity in exploration
+
+**Computed Measurements**: create new measurements from integrated measurements and visualize
+
+<div class="centered">
+<video width="320" height="240" controls>
+<source src="movies/transform_customize_v2.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</div>
+
+## Creativity in exploration
+
+**Summarization on the fly**: create new measurements from integrated measurements and visualize
+
+<div class="centered">
+<video width="320" height="240" controls>
+<source src="movies/transform_aggregate.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</div>
+
+## Statistically informed visual exploration
+
+<div class="centered">
+<video width="80%" height="80%" controls>
+<source src="movies/guided_exploration_v2.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</div>
