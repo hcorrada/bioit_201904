@@ -1,16 +1,163 @@
 ---
-title: "Gene expression antiprofiles"
-subtitle: "Addressing reproducibility in genomic signatures by characterizing variance and estimation stability"
+title: "Visualization, statistical modeling and discovery in computational epigenomics"
 author: |
   Héctor Corrada Bravo   
   Center for Bioinformatics and Computational Biology  
   University of Maryland, College Park  
-date: August 11 2015
+date: Septmeber 21, 2015
 output: 
   ioslides_presentation:
     css: hcb_styles.css
     widescreen: true
 ---
+
+## What do we do
+
+<div class="centered">
+<img src="img/stickmen.png" style="max-height: 50%; max-width: 50%"/>
+</div>
+
+- Study the **molecular** basis of *variation* in development and disease
+- Using **high-throughput** experimental methods
+
+
+## The Genomic Revolution
+
+- For over a decade we have laid the basic molecular blueprint by **sequencing** DNA
+
+<div class="centered">
+<img src="img/genome_projects.png" style="max-height: 100%; max-width: 100%"/>
+</div>
+
+
+## The Genomic Revolution
+
+<div class="centered">
+<img src="img/archon.png" style="max-height: 100%; max-width: 100%"/>
+</div>
+
+build a **whole human genome** sequencing device and use it to sequence **100 human genomes** within **30 days or less**, with an accuracy of no more than one error in every 1,000,000 bases sequenced, with an accuracy rate of at least 98% of the genome, and at a recurring cost of **no more than $1,000 (US) per genome**.
+
+
+## The Genomic Revolution
+
+<div class="centered">
+<img src="img/archon2.png" style="max-height: 100%; max-width: 100%"/>
+</div>
+
+*“genome sequencing technology is plummeting in cost and increasing in speed independent of our competition”*
+
+*“companies can do this for less than $5,000 per genome, in a few days or less — and 
+are moving quickly towards the goals we set for the prize.”*
+
+
+## The Genomic Revolution
+
+**NHGRI strategic plan**
+
+<div class="centered">
+<img src="img/basepair_bedside.png" style="max-height: 100%; max-width: 100%"/>
+</div>
+
+<footer class="source">[Nature, 2011]</footer>
+
+## The Genomic Revolution
+
+**NHGRI strategic plan**
+
+"The major bottleneck in genome sequencing is no longer **data generation**—the computational challenges around **data analysis**, display and integration are now rate limiting. New approaches and methods are required to meet these challenges."
+
+- Data analysis 
+- Data integration
+- **Visualization**
+- Computational tools and infrastructure
+
+<footer class="source">[Nature, 2011]</footer>
+
+
+## What is Epigenomics?
+
+What makes them different?
+
+<div class="centered">
+<img src="img/fantasy.png" style="max-height: 100%; max-width: 100%"/>
+</div>
+
+Much human variation is due to difference in ~ 6 million DNA base pairs (0.1 % of genome) 
+
+
+## What is Epigenomics?
+
+What makes them different?
+
+<div class="centered">
+<img src="img/epi1.png" style="max-height: 60%; max-width: 60%"/>
+</div>
+
+Same genome is **expressed** differently during different **stages** and in different **tissues**.
+
+## What is Epigenomics?
+
+<div class="centered">
+<img src="img/epi2.png" style="max-height: 60%; max-width: 60%"/>
+</div>
+
+DNA is packed, making parts inaccessible, and this packing is **dynamic**!
+
+## What is Epigenomics?
+
+<div class="centered">
+<img src="img/epi3.png" style="max-height: 60%; max-width: 60%"/>
+<img src="img/epi4.png" style="max-height: 60%; max-width: 60%"/>
+</div>
+
+DNA methylation is a chemical modification of DNA, regulates *gene expression*.
+
+<footer class="source">[Robertson and Wolffe, Nat Rev Genet, 2000]</footer>
+
+## Our motivation
+
+Measuring DNA methylation and understanding role in expression regulation in solid tumors
+
+<div class="centered">
+<img src="img/block.png" style="max-height: 100%; max-width: 100%"/>
+</div>
+
+Large blocks of *hypo-methylation* (sometimes Mbps long) in colon cancer
+
+- **Hansen, et al., *Nat. Genetics*, 2011**
+- Corrada Bravo, et al., *BMC Bioinformatics*, 2012
+- Timp, et al., *Genome Medicine*, 2014
+- Dinalankara and Corrada Bravo, *Cancer Informatics*, in press.
+
+## Our motivation
+
+Measuring DNA methylation and understanding role in expression regulation in solid tumors
+<div class="centered">
+<img src="img/antiprofile.png" style="max-height: 45%; max-width: 45%"/>
+</div>
+
+Genes with *hyper-variable* expression in colon cancer are enriched within these blocks.
+
+- **Hansen, et al., *Nat. Genetics*, 2011**
+- Corrada Bravo, et al., *BMC Bioinformatics*, 2012
+- Timp, et al., *Genome Medicine*, 2014
+- Dinalankara and Corrada Bravo, *Cancer Informatics*, in press.
+
+## Our motivation
+
+Measuring DNA methylation and understanding role in expression regulation in solid tumors
+<div class="centered">
+<img src="img/barcode.png" style="max-height: 45%; max-width: 45%"/>
+<img src="img/barcode2.png" style="max-height: 45%; max-width: 45%"/>
+</div>
+
+Genes with *consistent hyper-variable expression* across tumors are tissue-specific.
+
+- Hansen, et al., *Nat. Genetics*, 2011
+- **Corrada Bravo, et al., *BMC Bioinformatics*, 2012**
+- Timp, et al., *Genome Medicine*, 2014
+- Dinalankara and Corrada Bravo, *Cancer Informatics*, in press.
 
 ## Gene Expression Anti-profiles 
 

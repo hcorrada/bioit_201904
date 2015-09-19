@@ -28,7 +28,8 @@
   margin-left: auto;
   margin-right: auto;
 }
-slides {
-  font-family: "HelveticaNeue-Light", "HelveticaNeue Light", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 300;
+
+slide {
+  font-family: "nyt-cheltenham", "HelveticaNeue-Light", "HelveticaNeue Light", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 400;
 }
