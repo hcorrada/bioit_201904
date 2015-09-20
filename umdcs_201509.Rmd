@@ -11,7 +11,7 @@ output:
     widescreen: true
 ---
 
-## What do we do
+---
 
 <div class="centered">
 <img src="img/stickmen.png" style="max-height: 50%; max-width: 50%"/>
@@ -28,28 +28,6 @@ output:
 <div class="centered">
 <img src="img/genome_projects.png" style="max-height: 100%; max-width: 100%"/>
 </div>
-
-
-## The Genomic Revolution
-
-<div class="centered">
-<img src="img/archon.png" style="max-height: 100%; max-width: 100%"/>
-</div>
-
-build a **whole human genome** sequencing device and use it to sequence **100 human genomes** within **30 days or less**, with an accuracy of no more than one error in every 1,000,000 bases sequenced, with an accuracy rate of at least 98% of the genome, and at a recurring cost of **no more than $1,000 (US) per genome**.
-
-
-## The Genomic Revolution
-
-<div class="centered">
-<img src="img/archon2.png" style="max-height: 100%; max-width: 100%"/>
-</div>
-
-*“genome sequencing technology is plummeting in cost and increasing in speed independent of our competition”*
-
-*“companies can do this for less than $5,000 per genome, in a few days or less — and 
-are moving quickly towards the goals we set for the prize.”*
-
 
 ## The Genomic Revolution
 
@@ -74,88 +52,129 @@ are moving quickly towards the goals we set for the prize.”*
 
 <footer class="source">[Nature, 2011]</footer>
 
+---
+
+My group's work as a simplex
+
+![](img/hcbravolab_simplex.png)
+
+# Computational Epigenomics
 
 ```{r child='epigenomics.Rmd' }
 ```
 
-
 ```{r child='antiprofiles.Rmd' }
 ```
+
+```{r child='methylflow.Rmd' }
+```
+
+## Moving forward
+
+- move anti-profiles closer to the clinic
+- explore _anomaly classification_ as a general learning setting
+- methods to understand hierarchical organization of epigenomic domains
+- better understand connection between intra-tumor heterogeneity and consistent hyper-variability in cancer
 
 ```{r child='epiviz.Rmd' }
 ```
 
+## Moving forward
 
-## What's next!
+- collaborative computational and visual analysis (w/ N. Elmqvist @ HCIL)
+- effective visual methods to explore hierarchical organization of genome
+- deeper integration of statistically-informed visualization
+- visualization-informed statistical analysis
 
-Beyond genomics and epigenomics: metagenomics
+
+---
+
+- Discoveries: consistent hypo-methylation, hyper-variability
+- Methods: anomaly classification as a setting to understand predictor stability
+- Tools: computational and visual exploratory genomic data analysis
+
+![](img/hcbravolab_simplex.png)
+
+---
+
+Tools
+
+- `antiProfiles`
+- `minfi`
+- `bumphunter`
+- `Rcplex`
+- `Rcsdp`
+- `BlindCall`
+- `HTShape`
+- `qsmooth`
+- `epiviz`
+- `epivizr`
+
+## Metagenomics (mixed genomes)
 
 <div class="centered">
-<img src="images/hmp.png" style="max-width=50%; min-width=50%"/>
+<img src="img/hmp.png" style="max-width=50%; min-width=50%"/>
 </div>
 
 <footer class="source">[Human Microbiome Project]</footer>
 
 
-## What's next!
+## Metagenomics (mixed genomes)
 
-Beyond genomics and epigenomics: metagenomics
+- Discoveries: pathogenic associations for childhood diarrhea in developing world. (Genome Biology, 2014)
+- Methods: association discovery for metagenomic communities. (Nature Methods, 2013)
+- Tools: `metagenomeSeq`, `metagenomicFeatures`, `metaviz`
+
+---
 
 **Coordinates**:
 
 <div class="centered">
-<img src="images/tree.png" style="max-width=1%; min-width=1%"/>
+<img src="img/tree.png" style="max-width=1%; min-width=1%"/>
 </div>
 
-
-## What's next!
-
-Beyond genomics and epigenomics: metagenomics
+---
 
 **Samples**:
 <div class="centered">
-<img src="images/meta_heatmap.jpg" style="max-width=50%; min-width=50%"/>
+<img src="img/meta_heatmap.jpg" style="max-width=50%; min-width=50%"/>
 </div>
 
 
-## What's next!
+---
 
-Beyond genomics and epigenomics: metagenomics
 
 <div class="centered">
-<video width="320" height="240" controls>
-  <source src="movies/metavizr1.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-
+<img src="img/data_sources_with_hierarchy.png" style="max-height: 45%; max-width: 45%"/>
 </div>
 
+Hierachically organized features
 
-## What's next!
+---
 
-Beyond genomics and epigenomics: metagenomics
+Hierarchically organized features
 
 <div class="centered">
-<video width="320" height="240" controls>
-  <source src="movies/metavizr2.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-
+![](movies/metavizr1.gif)
 </div>
 
+---
 
+### NHGRI strategic plan
+
+"Meeting the computational challenges for genomics requires scientists with expertise in biology as well as in informatics, computer science, mathematics, statistics and/or engineering." 
+
+_A new generation of investigators who are proficient in two or more of these fields must be trained and supported._
+
+---
 
 ###Acknowledgements
-**Wikum Dinalankara**: (formerly) Ph.D. student @ U. Maryland (now postdoc @ Johns Hopkins)  
-**Nick Thieme**: Ph.D. student @ U. Maryland  
-Jeff Leek, Rafael A. Irizarry, Andy Feinberg  
+Colleagues at CBCB  
+Past members of HCBravo group (now at Harvard, U. Chicago, Johns Hopkins, Genentech, Dow Jones Data Science)  
+Current members of HCBravo group  
+Collaborators at JHU/Harvard: Jeff Leek, Rafael A. Irizarry, Andy Feinberg, Winston Timp, Kasper Hansen, and Ben Langmead 
 
-###References
-Corrada Bravo, et al. (2012) _BMC Bioinformatics_.  
-Dinlanakara et al. (2015) _Cancer Informatics_.  
-Dinalankara et al. _In preparation_  
-
-###Contact
+###More information
 [http://hcbravo.org](http://hcbravo.org)  
 [\@hcorrada](https://twitter.com/hcorrada)    
 

@@ -7,9 +7,9 @@
 - State-of-the-art computational and statistical analysis
 platform
 - We develop and apply methods for these analyses in this platform
-- Our collaborators take part in analysis in this platform
+- Our collaborators do analysis in this platform with us
 
-## What we wanted
+---
 
 > - Data transformation and modeling: data smoothing, region finding (R/Bioconductor: `Bsmooth`, `minfi`)
 > - Genome browsing: search by gene, search by overlap
@@ -35,20 +35,6 @@ platform
 <img src="img/epiviz_2_logo_medium.png" style="max-height: 40%; max-width: 40%"/>
 </div>
 
-### Integrative, visual and computational exploratory analysis of genomic data
-
-<img src="img/florin_chelaru.jpg"/>
-Florin Chelaru, UMD
-
-Chelaru, et al. Nature Methods, 2014.
-
-[The old way](http://prezi.com/ddvaav72s_3k/?utm_campaign=share&utm_medium=copy&rc=ex0share)
-
----
-
-<div class="centered">
-<img src="img/epiviz_2_logo_medium.png" style="max-height: 40%; max-width: 40%"/>
-</div>
 
 ### Integrative, visual and computational exploratory analysis of genomic data
 
@@ -58,7 +44,7 @@ Chelaru, et al. Nature Methods, 2014.
 - Reproducible dissemination
 - Communication with R/Bioconductor: `epivizr` package
 
-e.g.: http://epiviz.cbcb.umd.edu/2?ws=45KBV4C7z3u
+e.g.: http://epiviz.cbcb.umd.edu/ws=45KBV4C7z3u
 <footer class="source">[Nat. Methods, 2014]</footer>
 
 ---
@@ -67,17 +53,38 @@ e.g.: http://epiviz.cbcb.umd.edu/2?ws=45KBV4C7z3u
 
 ---
 
-## Communication with R/Bioc
+---
 
-Using the `epivizr` package
+### Creativity in exploration
 
-- Setup up an `epivizr` session
+We are building software systems to support creative exploratory analysis of large genome-wide datasets...
 
-```r
-mgr <- startEpiviz(workspace="qyOTB6vVnff")
-```
+<div class="centered">
+<img src="img/terry.png" style="max-height: 60%; max-width: 60%"/>
+</div>
+<footer class="source">[T. Speed]</footer>
 
-- Calculate a statistic of interest
+---
+
+**Computed Measurements**: create new measurements from integrated measurements and visualize
+
+<div class="centered">
+![](movies/transform_customize_v2.gif)
+</div>
+
+---
+
+**Summarization on the fly**: create new measurements from integrated measurements and visualize
+
+<div class="centered">
+![](movies/transform_aggregate.gif)
+</div>
+
+
+---
+
+**Statistically-guided exploration**: 
+Calculate a statistic of interest
 
 ```r
 # Get tumor methylation base-pair data
@@ -90,11 +97,10 @@ s <- region_stat[,"stat"]
 
 --- 
 
-## Communication with R/Bioc
+**Statistically-guided exploration**:
+Explore data based on statistic
 
-Using the `epivizr` package: browse by regions of interest.
-
-- What's around the regions with highest across CpG variability
+_What's around the regions with highest across CpG variability?_
 
 ```r
 # get locations in decreasing order
@@ -104,25 +110,21 @@ slideShowRegions <- rowRanges(se)[indices] + 1250000L
 mgr$slideshow(slideShowRegions)
 ```
 
-## Plugins, plugins, plugins
+---
 
-Our architecture is *dynamically extensible*. We can easily integrate new data types and add new visualizations.
-
-Example: adding a new visualization
-
-see: https://gist.github.com/11017650
+<div class="centered">
+![](movies/guided_exploration_v2.gif)
+</div>
 
 ---
 
+**dynamically extensible**: 
+Easily integrate new data types and add new visualizations.
+
 http://epiviz.cbcb.umd.edu/?gist[]=11017650&ws=Y8kWxCO2Ajn
-<iframe data-src="http://epiviz.cbcb.umd.edu/2/?gist[]=11017650&ws=Y8kWxCO2Ajn"></iframe>
+<iframe data-src="http://epiviz.cbcb.umd.edu/?gist[]=11017650&ws=Y8kWxCO2Ajn"></iframe>
 
-
-## Plugins, plugins, plugins
-
-<iframe data-src="http://epiviz.github.io"></iframe>
-
-# Datatypes
+---
 
 <div class="centered">
 <img src="img/datatypes.png" style="max-width=50%; min-width=50%"/>
@@ -134,9 +136,9 @@ http://epiviz.cbcb.umd.edu/?gist[]=11017650&ws=Y8kWxCO2Ajn
 ---
 
 http://epiviz.cbcb.umd.edu/?ws=SRHZlWRRAPd&gist[]=a82a998817564ce3fe48&settings=default&
-<iframe data-src="http://epiviz.cbcb.umd.edu/2/?ws=SRHZlWRRAPd&gist[]=a82a998817564ce3fe48&settings=default&"></iframe>
+<iframe data-src="http://epiviz.cbcb.umd.edu/?ws=SRHZlWRRAPd&gist[]=a82a998817564ce3fe48&settings=default&"></iframe>
 
-## Analysis era
+---
 
 <div class="centered">
 <img src="img/hadley.png" style="max-height: 50%; max-width: 50%"/>
@@ -151,62 +153,25 @@ One interpretation of *Big Data* is *Many relevant sources of contextual data*
 - Iterative process
 - Visual and computational exploration go hand in hand
 
-## Visualization goals
+---
+
+### Visualization goals
 
 - Context 
-- Integrate and align multiple data sources; navigate; search
-- *Connect*: brushing
-- *Encode*: map visualization properties to data on the fly
-- *Reconfigure*: multiple views of the same data
+  - Integrate and align multiple data sources; navigate; search
+  - *Connect*: brushing
+  - *Encode*: map visualization properties to data on the fly
+  - *Reconfigure*: multiple views of the same data
 
 <footer class="source">[Perer & Shneiderman]</footer>
 
-## Visualization goals
+---
 
 - Data
-- *Select and filter*: tight-knit integration with R/Bioconductor; 
-- (future) filters on visualization propagate to data environment
+  - *Select and filter*: tight-knit integration with R/Bioconductor; 
+  - (current work) filters on visualization propagate to data environment
 - Model
-- New 'measurements' the result of modeling; perhaps suggested by data context
+  - New 'measurements' the result of modeling; perhaps suggested by data context
 
 <footer class="source">[Perer & Shneiderman]</footer>
 
-## Creativity in exploration
-
-We are building a software system to support creative exploratory analysis of epigenome-wide datasets...
-
-<div class="centered">
-<img src="images/terry.png" style="max-height: 60%; max-width: 60%"/>
-</div>
-<footer class="source">[T. Speed]</footer>
-
-## Creativity in exploration
-
-**Computed Measurements**: create new measurements from integrated measurements and visualize
-
-<div class="centered">
-<video width="320" height="240" controls>
-<source src="movies/transform_customize_v2.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-</div>
-
-## Creativity in exploration
-
-**Summarization on the fly**: create new measurements from integrated measurements and visualize
-
-<div class="centered">
-<video width="320" height="240" controls>
-<source src="movies/transform_aggregate.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-</div>
-
-## Statistically informed visual exploration
-
-<div class="centered">
-<video width="80%" height="80%" controls>
-<source src="movies/guided_exploration_v2.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-</div>

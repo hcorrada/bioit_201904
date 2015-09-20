@@ -1,31 +1,46 @@
-## What is Epigenomics?
+## What is Epigenomics? 
 
-What makes them different?
+### What makes them different?
 
 <div class="centered">
-<img src="img/fantasy.png" style="max-height: 100%; max-width: 100%"/>
+<img src="img/jobsnadwoz.jpeg" style="max-height: 100%; max-width: 100%"/>
 </div>
 
-Much human variation is due to difference in ~ 6 million DNA base pairs (0.1 % of genome) 
+Much human variation is due to difference in ~6 million DNA base pairs (0.1% of genome) 
 
+<div class="notes">
+- Phenotype, including disease susceptibility
+- One led a fairly strict diet and regimen, had pancreatic cancer, the other did not
+- While that gives a lot of information about the molecular basis of certain processes,
+it is not the full story. 
+</div>
 
-## What is Epigenomics?
+---
 
-What makes them different?
+### What makes them different?
 
 <div class="centered">
 <img src="img/epi1.png" style="max-height: 60%; max-width: 60%"/>
 </div>
 
-Same genome is **expressed** differently during different **stages** and in different **tissues**.
+Genes are **expressed** differently during different **stages** and in different **tissues**.
 
-## What is Epigenomics?
+<div class="notes">
+- Something that we want to understand is how that genetic variation leads to phenotypic variation.
+- A major part of understanding that, comes from understanding how regulation works.
+</div>
+
+---
 
 <div class="centered">
 <img src="img/epi2.png" style="max-height: 60%; max-width: 60%"/>
 </div>
 
-DNA is packed, making parts inaccessible, and this packing is **dynamic**!
+DNA is packed, making certain parts inaccessible, and this packing is **dynamic**.
+
+<div class="notes">
+- DNA structure plays a major role
+</div>
 
 ## What is Epigenomics?
 
@@ -38,46 +53,118 @@ DNA methylation is a chemical modification of DNA, regulates *gene expression*.
 
 <footer class="source">[Robertson and Wolffe, Nat Rev Genet, 2000]</footer>
 
-## Our motivation
+<div class="notes">
+- DNA methylation plays a major role in this regulation process
+- Plus, we know how it is inherited from cell to cell, cell-fate
+- invovled in differentiation
+- can give us an important idea of this process in development and disease
+- plasticity
+</div>
 
-Measuring DNA methylation and understanding role in expression regulation in solid tumors
+---
+
+![](img/meth_cartoon.png)
+
+## Probing DNA Methylation
+
+![](img/bisulfite_conversion.png)
+
+## Probing DNA Methylation
+
+![](img/meth_pileup.png)
+
+## Probing DNA Methylation
+
+![](img/data_table.png)
+
+---
+
+![](img/data_table2.png)
+
+---
+
+![](img/data_table3.png)
+
+## Probing DNA Methylation
+
+![](img/measure_meth.png)
+
+- Local-likelihood smoothing method
+- high-frequency smoothing reveals local methylation structure (small domains)
+- low-frequency smoothing reveals long-range methylation structure (large domains)
+
+<footer class="source">
+  Nature Genetics, 2011\br
+  Bioinformatics, 2013
+</footer>
+
+## DNA Methylation in cancer
+
 
 <div class="centered">
 <img src="img/block.png" style="max-height: 100%; max-width: 100%"/>
 </div>
 
-Large blocks of *hypo-methylation* (sometimes Mbps long) in colon cancer
+Large blocks of *hypo-methylation in colon cancer
 
-- **Hansen, et al., *Nat. Genetics*, 2011**
-- Corrada Bravo, et al., *BMC Bioinformatics*, 2012
-- Timp, et al., *Genome Medicine*, 2014
-- Dinalankara and Corrada Bravo, *Cancer Informatics*, in press.
+<footer class="source">Nat. Genetics, 2011</footer>
 
-## Our motivation
+<div class="notes">
+- long, 
+- consistent but partially methylated in normal tissues
+- while methylation levels are inconsistent in cancer, boundaries of these domains are conserved across tissues
+</div>
+- overlaps with other important genomic domains
+- genes within these blocks are **tissue-specific**
 
-Measuring DNA methylation and understanding role in expression regulation in solid tumors
+---
+
 <div class="centered">
 <img src="img/antiprofile.png" style="max-height: 45%; max-width: 45%"/>
 </div>
 
 Genes with *hyper-variable* expression in colon cancer are enriched within these blocks.
 
-- **Hansen, et al., *Nat. Genetics*, 2011**
-- Corrada Bravo, et al., *BMC Bioinformatics*, 2012
-- Timp, et al., *Genome Medicine*, 2014
-- Dinalankara and Corrada Bravo, *Cancer Informatics*, in press.
+<footer class="source">Nat. Genetics, 2011</footer>
 
-## Our motivation
+---
 
-Measuring DNA methylation and understanding role in expression regulation in solid tumors
+![](img/timp1.png)
+
+Hypo-methylation blocks observed in other cancer types.
+
+<footer class="source">Genome Medicine, 2014</footer>
+
+---
+
+![](img/timp2.png)
+
+Gene expression hyper-variability enriched in hypo-methylation blocks in other cancer types.
+
+<footer class="source">Genome Medicine, 2014</footer>
+
+
+---
+
 <div class="centered">
 <img src="img/barcode.png" style="max-height: 45%; max-width: 45%"/>
 <img src="img/barcode2.png" style="max-height: 45%; max-width: 45%"/>
 </div>
 
+<footer class="source">BMC Bioinformatics, 2013</footer>
+
 Genes with *consistent hyper-variable expression* across tumors are tissue-specific.
 
-- Hansen, et al., *Nat. Genetics*, 2011
-- **Corrada Bravo, et al., *BMC Bioinformatics*, 2012**
-- Timp, et al., *Genome Medicine*, 2014
-- Dinalankara and Corrada Bravo, *Cancer Informatics*, in press.
+## Summary
+
+- Large domains of methylation loss is a stable mark across different cancer types
+- Gene expression hyper-variability is enriched within these domains
+- Genes within these regions are tissue-specific and involved in cellular fate
+
+---
+
+<div class="centered">
+<img src="img/epi1.png" style="max-height: 60%; max-width: 60%"/>
+</div>
+
+Genes are **expressed** differently during different **stages** and in different **tissues**.

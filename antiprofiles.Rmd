@@ -1,18 +1,8 @@
-## Gene Expression Anti-profiles 
+## Gene Expression Anti-profiles
 
-<div class="centered">
-<img src="img/antiprofile.png" style="max-height: 70%; max-width: 70%;"/> 
+<div class="red2">
+SOME DISCUSSION OF STABILITY AND REPRODUCIBILITY HERE
 </div>
-
-Motivated by observations that gene expression hyper-variability is enriched in specific regions of epigenetic alteration in colon cancer...
-
-## Gene Expression Anti-profiles 
-
-<div class="centered">
-<img src="img/tspec.png" style="max-height: 95%; max-width: 95%;"/>
-</div>
-
-...and that _consistent hypervariability_ across tumor types is enriched in genes involved in tissue specificity
 
 ## Gene Expression Anti-profiles 
 
@@ -22,7 +12,9 @@ Motivated by observations that gene expression hyper-variability is enriched in 
 
 _anti-profile score_: measures sample-specific deviation from normal expression in consistently hyper-variable genes
 
-## Gene Expression Anti-profiles 
+<footer class="source">BMC Bioinformatics, 2013</footer>
+
+---
 
 <div class="centered">
 <img src="img/stable.png" style="max-height: 85%; max-width: 85%;"/>
@@ -31,7 +23,9 @@ _anti-profile score_: measures sample-specific deviation from normal expression 
 Good cross-experiment properties  
 Stability in _normal_ expression across experiments
 
-## Gene Expression Anti-profiles
+<footer class="source">BMC Bioinformatics, 2013</footer>
+
+---
 
 <div class="centered">
 <img src="img/aucs.png" style="max-height: 45%; max-width: 45%;"/>
@@ -39,7 +33,9 @@ Stability in _normal_ expression across experiments
 
 Prediction in leave-one-tissue out experiment  
 
-## Gene Expression Anti-profiles 
+<footer class="source">BMC Bioinformatics, 2013</footer>
+
+---
 
 <div class="centered">
 <img src="img/progression.png" style="max-height: 50%; max-width: 50%"/>
@@ -47,7 +43,7 @@ Prediction in leave-one-tissue out experiment
 
 Anti-profile score distinguishes between stages in tumor progression
 
-## Gene Expression Anti-profiles
+---
 
 <div class="centered">
 <img src="img/progression_meth.png" style="max-height: 80%; max-width: 80%"/>
@@ -55,7 +51,9 @@ Anti-profile score distinguishes between stages in tumor progression
 
 DNA methylation anti-profiles score distinguishes between stages in tumor progression
 
-## Gene Expression Anti-profiles 
+<footer class="source">Cancer Informatics, 2015</footer>
+
+---
 
 <div class="centered">
 <img src="img/prognosis.png" style="max-height: 70%; max-width: 70%"/>
@@ -63,13 +61,17 @@ DNA methylation anti-profiles score distinguishes between stages in tumor progre
 
 Stratification based on anti-profile score
 
-## Gene Expression Anti-profiles { .hcb_image }
+<footer class="source">Cancer Informatics, 2015</footer>
+
+---
 
 <div class="centered">
 <img src="img/prognosis.jpg" style="max-height: 45%; max-width: 45%"/>
 </div>
 
 Stratification of breast samples based on anti-profile score
+
+<footer class="source">Cancer Informatics, 2015</footer>
 
 ## Summary
 
@@ -79,8 +81,6 @@ Stratification of breast samples based on anti-profile score
 
 ---
 
-# Stability Analysis via Large-Margin Function Approximation
-
 # Stability Analysis via Support Vector Machines
 
 ## One-class Support Vector Machines 
@@ -88,7 +88,7 @@ Stratification of breast samples based on anti-profile score
 Support Vector Machines for Anomaly Detection: determine if observations belong to a given group or are _anomalies_.
 
 <div class="centered">
-<img src="img/oneclass.png" style="max-width: 80%; max-heigh: 80%;">
+<img src="img/oneclass.png" style="max-width: 80%; max-height: 80%;">
 </div>
 
 ## Anomaly Classification

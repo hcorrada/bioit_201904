@@ -1,0 +1,45 @@
+## This is a *heterogeneous* cell population
+
+![](img/block.png)
+
+![](img/population1.png)
+
+## This is a *heterogeneous* cell population
+
+![](img/block.png)
+
+![](img/population2.png)
+
+---
+
+### Methylation pattern reconstruction problem
+
+- Given a set of mapped reads
+- Determine _composition_ of cell-specific methylation patterns
+
+![](img/patterns.png)
+
+### Methylation pattern reconstruction problem
+
+![](img/methylflow.png)
+
+---
+
+![](img/region_graph.png)
+
+$$
+Ey_v = \sum_{u:(v,u) |in E} \ell_{vu} \sum_{p:(v,u)\in p} \theta_p
+$$
+
+---
+
+![](img/region_graph.png)
+
+- Penalized method of moments:
+  - #parameters = #paths through graph
+  - sparsity inducing penalty to obtain solution with small # of patterns
+  
+$$
+\min_{\theta_p} \sum_v |y_v - \sum_{u:(v,u)\in E} \ell_{vu} \sum_{p:(v,u)\in p} \theta_p | + \lambda \sum_p |\theta_p |
+$$
+
