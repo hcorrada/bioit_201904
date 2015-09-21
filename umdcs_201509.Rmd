@@ -4,7 +4,7 @@ author: |
   Héctor Corrada Bravo   
   Center for Bioinformatics and Computational Biology  
   University of Maryland, College Park  
-date: Septmeber 21, 2015
+date: September 21, 2015
 output: 
   ioslides_presentation:
     css: hcb_styles.css
