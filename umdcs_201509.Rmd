@@ -29,7 +29,7 @@ output:
 <img src="img/genome_projects.png" style="max-height: 100%; max-width: 100%"/>
 </div>
 
-## The Genomic Revolution
+---
 
 **NHGRI strategic plan**
 
@@ -39,7 +39,7 @@ output:
 
 <footer class="source">[Nature, 2011]</footer>
 
-## The Genomic Revolution
+---
 
 **NHGRI strategic plan**
 
@@ -56,7 +56,9 @@ output:
 
 My group's work as a simplex
 
-![](img/hcbravolab_simplex.png)
+<div class="centered">
+<img src="img/hcbravolab_simplex.png" style="height: 500px;"/>
+</div>
 
 # Computational Epigenomics
 
@@ -71,10 +73,21 @@ My group's work as a simplex
 
 ## Moving forward
 
-- move anti-profiles closer to the clinic
-- explore _anomaly classification_ as a general learning setting
-- methods to understand hierarchical organization of epigenomic domains
-- better understand connection between intra-tumor heterogeneity and consistent hyper-variability in cancer
+>- move anti-profiles closer to the clinic
+>- explore _anomaly classification_ as a general learning setting
+>- methods to understand hierarchical organization of epigenomic domains
+>- better understand connection between intra-tumor heterogeneity and consistent hyper-variability in cancer
+
+---
+
+- Discoveries: consistent hypo-methylation, hyper-variability
+- Methods: anomaly classification as a setting to understand predictor stability
+- Tools
+
+<div class="centered">
+<img src="img/hcbravolab_simplex.png" style="height: 400px;"/>
+</div>
+
 
 ```{r child='epiviz.Rmd' }
 ```
@@ -86,29 +99,15 @@ My group's work as a simplex
 - deeper integration of statistically-informed visualization
 - visualization-informed statistical analysis
 
-
 ---
 
 - Discoveries: consistent hypo-methylation, hyper-variability
 - Methods: anomaly classification as a setting to understand predictor stability
 - Tools: computational and visual exploratory genomic data analysis
 
-![](img/hcbravolab_simplex.png)
-
----
-
-Tools
-
-- `antiProfiles`
-- `minfi`
-- `bumphunter`
-- `Rcplex`
-- `Rcsdp`
-- `BlindCall`
-- `HTShape`
-- `qsmooth`
-- `epiviz`
-- `epivizr`
+<div class="centered">
+<img src="img/hcbravolab_simplex.png" style="height: 200px;"/>
+</div>
 
 ## Metagenomics (mixed genomes)
 
@@ -155,7 +154,9 @@ Hierachically organized features
 Hierarchically organized features
 
 <div class="centered">
-![](movies/metavizr1.gif)
+<video width="75%" height="75%">
+  <source src="movies/metavizr1.mp4" type="video/mp4">
+</video>
 </div>
 
 ---

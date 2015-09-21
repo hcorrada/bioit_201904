@@ -1,9 +1,9 @@
 ## What is Epigenomics? 
 
-### What makes them different?
+**What makes them different?**
 
 <div class="centered">
-<img src="img/jobsnadwoz.jpeg" style="max-height: 100%; max-width: 100%"/>
+<img src="img/jobsnadwoz.jpeg" style="height: 375px;"/>
 </div>
 
 Much human variation is due to difference in ~6 million DNA base pairs (0.1% of genome) 
@@ -17,7 +17,7 @@ it is not the full story.
 
 ---
 
-### What makes them different?
+**What makes them different?**
 
 <div class="centered">
 <img src="img/epi1.png" style="max-height: 60%; max-width: 60%"/>
@@ -42,14 +42,14 @@ DNA is packed, making certain parts inaccessible, and this packing is **dynamic*
 - DNA structure plays a major role
 </div>
 
-## What is Epigenomics?
+---
 
 <div class="centered">
 <img src="img/epi3.png" style="max-height: 60%; max-width: 60%"/>
 <img src="img/epi4.png" style="max-height: 60%; max-width: 60%"/>
 </div>
 
-DNA methylation is a chemical modification of DNA, regulates *gene expression*.
+DNA methylation is a chemical modification of DNA, involved in *gene expression* regulation.
 
 <footer class="source">[Robertson and Wolffe, Nat Rev Genet, 2000]</footer>
 
@@ -61,51 +61,72 @@ DNA methylation is a chemical modification of DNA, regulates *gene expression*.
 - plasticity
 </div>
 
+## Probing DNA Methylation
+
+<div class="centered">
+<img src="img/meth_cartoon.png" style="height: 575px;"/>
+</div>
+
+--- 
+
+<div class="centered">
+<img src="img/bisulfite_conversion.png" style="height: 75px;"/>
+</div>
+
+--- 
+
+<div class="centered">
+<img src="img/bisulfite_conversion.png" style="height: 75px;"/>
+</div>
+
+<div class="centered">
+<img src="img/meth_pileup.png" style="height: 400px;"/>
+</div>
+
+## The data
+
+<div class="centered">
+<img src="img/data_table.png" style="height: 550px;"/>
+</div>
+
 ---
 
-![](img/meth_cartoon.png)
-
-## Probing DNA Methylation
-
-![](img/bisulfite_conversion.png)
-
-## Probing DNA Methylation
-
-![](img/meth_pileup.png)
-
-## Probing DNA Methylation
-
-![](img/data_table.png)
+<div class="centered">
+<img src="img/data_table2.png" style="height: 550px;"/>
+</div>
 
 ---
 
-![](img/data_table2.png)
-
----
-
-![](img/data_table3.png)
+<div class="centered">
+<img src="img/data_table3.png" style="height: 550px;"/>
+</div>
 
 ## Probing DNA Methylation
 
-![](img/measure_meth.png)
+<div class="columns-2">
 
-- Local-likelihood smoothing method
-- high-frequency smoothing reveals local methylation structure (small domains)
-- low-frequency smoothing reveals long-range methylation structure (large domains)
+<div class="centered">
+<img src="img/measure_meth.png" style="height: 450px;"/>
+</div>
+
+- local-likelihood smoothing method
+- **high-frequency smoothing** estimates local methylation structure (small domains)
+- **low-frequency smoothing** estimates long-range methylation structure (large domains)
 
 <footer class="source">
   Nature Genetics, 2011\br
   Bioinformatics, 2013
 </footer>
 
-## DNA Methylation in cancer
+</div>
 
+## DNA Methylation in cancer
 
 <div class="centered">
 <img src="img/block.png" style="max-height: 100%; max-width: 100%"/>
 </div>
 
-Large blocks of *hypo-methylation in colon cancer
+Large blocks of **hypo-methylation** in colon cancer
 
 <footer class="source">Nat. Genetics, 2011</footer>
 
@@ -120,29 +141,32 @@ Large blocks of *hypo-methylation in colon cancer
 ---
 
 <div class="centered">
-<img src="img/antiprofile.png" style="max-height: 45%; max-width: 45%"/>
+<img src="img/antiprofile.png" style="height: 400px;"/>
 </div>
 
-Genes with *hyper-variable* expression in colon cancer are enriched within these blocks.
+Genes with **hyper-variable** expression in colon cancer are enriched within these blocks.
 
 <footer class="source">Nat. Genetics, 2011</footer>
 
 ---
 
-![](img/timp1.png)
+<div class="centered">
+<img src="img/timp1.png" style="height: 400px;"/>
+</div>
 
-Hypo-methylation blocks observed in other cancer types.
+**Hypo-methylation** blocks observed across five solid tumor types.
 
 <footer class="source">Genome Medicine, 2014</footer>
 
 ---
 
-![](img/timp2.png)
+<div class="centered">
+<img src="img/timp2.png" style="height: 400px;"/>
+</div>
 
-Gene expression hyper-variability enriched in hypo-methylation blocks in other cancer types.
+Gene expression **hyper-variability** enriched in hypo-methylation blocks in other cancer types.
 
 <footer class="source">Genome Medicine, 2014</footer>
-
 
 ---
 
@@ -151,15 +175,15 @@ Gene expression hyper-variability enriched in hypo-methylation blocks in other c
 <img src="img/barcode2.png" style="max-height: 45%; max-width: 45%"/>
 </div>
 
-<footer class="source">BMC Bioinformatics, 2013</footer>
+Genes with **consistent hyper-variable expression** across tumors are _tissue-specific_.
 
-Genes with *consistent hyper-variable expression* across tumors are tissue-specific.
+<footer class="source">BMC Bioinformatics, 2013</footer>
 
 ## Summary
 
-- Large domains of methylation loss is a stable mark across different cancer types
-- Gene expression hyper-variability is enriched within these domains
-- Genes within these regions are tissue-specific and involved in cellular fate
+- large domains of methylation loss are a stable mark across cancer types
+- gene expression hyper-variability is enriched within these domains
+- hyper-variable genes within these regions are tissue-specific and involved in cellular fate
 
 ---
 

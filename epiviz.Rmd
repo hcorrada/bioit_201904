@@ -1,15 +1,33 @@
-## R/Bioconductor
+## Tools
 
+<div class="columns-2">
+
+<div>
 <div class="centered">
-<img src="img/rbioc.png" style="max-height: 70%; max-width: 70%"/>
+<img src="img/rbioc.png" style="height: 150px;"/>
 </div>
 
 - State-of-the-art computational and statistical analysis
 platform
 - We develop and apply methods for these analyses in this platform
 - Our collaborators do analysis in this platform with us
+</div>
+
+<div>
+- `antiProfiles`
+- `minfi`
+- `bumphunter`
+- `Rcplex`
+- `Rcsdp`
+- `HTShape`
+- `qsmooth`
+</div>
+
+</div>
 
 ---
+
+**Collaborative and exploratory analysis**
 
 > - Data transformation and modeling: data smoothing, region finding (R/Bioconductor: `Bsmooth`, `minfi`)
 > - Genome browsing: search by gene, search by overlap
@@ -18,10 +36,8 @@ platform
 
 ## Genomic Data Science! 
 
-- We have entered the era of data analysis
-- Epigenomics roadmap, Encode, TCGA, ...
-- *We have unprecedented ability to measure*
-- *and lots of publicly available data to contextualize it*
+- We have unprecedented ability to measure
+- and lots of publicly available data to contextualize it
 
 <div class="centered">
 <img src="img/hadley.png" style="max-height: 50%; max-width: 50%"/>
@@ -69,7 +85,9 @@ We are building software systems to support creative exploratory analysis of lar
 **Computed Measurements**: create new measurements from integrated measurements and visualize
 
 <div class="centered">
-![](movies/transform_customize_v2.gif)
+<video width="75%" height="75%" autoplay>
+  <source src="movies/transform_customize_v2.mp4" type="video/mp4">
+</video>
 </div>
 
 ---
@@ -77,7 +95,9 @@ We are building software systems to support creative exploratory analysis of lar
 **Summarization on the fly**: create new measurements from integrated measurements and visualize
 
 <div class="centered">
-![](movies/transform_aggregate.gif)
+<video width="75%" height="75%" autoplay>
+  <source src="movies/transform_aggregate.mp4" type="video/mp4">
+</video>
 </div>
 
 
@@ -113,7 +133,9 @@ mgr$slideshow(slideShowRegions)
 ---
 
 <div class="centered">
-![](movies/guided_exploration_v2.gif)
+<video width="75%" height="75%" autoplay>
+  <source src="movies/guided_exploration_v2.mp4" type="video/mp4">
+</video>
 </div>
 
 ---

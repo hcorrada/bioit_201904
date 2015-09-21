@@ -1,18 +1,35 @@
-## Gene Expression Anti-profiles
+## Gene expression anti-profiles
 
-<div class="red2">
-SOME DISCUSSION OF STABILITY AND REPRODUCIBILITY HERE
-</div>
+- molecular methods for cancer detection, prognosis and treatment matching will be the basis of individualized medicine
+- gene expression profile methods have been subject of study for decades
+- very few proposed predictors are translated to the clinic
+- by far, the biggest culprit is irreproducibility of results in preliminary studies
 
-## Gene Expression Anti-profiles 
+---
 
 <div class="centered">
-<img src="img/antiprofile.png" style="max-height: 70%; max-width: 70%;"/>
+<img src="img/antiprofile.png" style="height: 400px;"/>
 </div>
 
 _anti-profile score_: measures sample-specific deviation from normal expression in consistently hyper-variable genes
 
 <footer class="source">BMC Bioinformatics, 2013</footer>
+
+---
+
+- **Feature selection**: top 100 genes with greatest **hyper-variable** expression in tumor:
+
+$$
+\log_2 \frac{\text{std. dev}_{\text{cancer}}}{\text{std. dev}_{\text{normal}}}
+$$
+
+- **Range of normal expression**: 
+
+$$
+\mathrm{med} \, \text{normal expression}_g \pm 5 \times \mathrm{mad} \, \text{normal expression}_g
+$$
+
+- **anti-profile score**: number of genes in sample where expression is outside normal range
 
 ---
 
@@ -42,6 +59,8 @@ Prediction in leave-one-tissue out experiment
 </div>
 
 Anti-profile score distinguishes between stages in tumor progression
+
+<footer class="source">Cancer Informatics, 2015</footer>
 
 ---
 
@@ -79,11 +98,10 @@ Stratification of breast samples based on anti-profile score
 >- Nice prediction properties _across experiments_ and _across tissue types_  
 >- Captures increasing hyper-variability associated with progression and prognosis
 
----
 
-# Stability Analysis via Support Vector Machines
+## Stability Analysis via Support Vector Machines
 
-## One-class Support Vector Machines 
+**One-class Support Vector Machines**
 
 Support Vector Machines for Anomaly Detection: determine if observations belong to a given group or are _anomalies_.
 
@@ -93,15 +111,17 @@ Support Vector Machines for Anomaly Detection: determine if observations belong 
 
 ## Anomaly Classification
 
->- Distinguish observations from two _anomalous_ groups (e.g., adenoma vs. tumor)
+- Distinguish observations from two _anomalous_ groups (e.g., adenoma vs. tumor)
 
->- How can we incorporate the fact that we are classifying anomalies?
+- How can we incorporate the fact that we are classifying anomalies?
 
->- Why (and when) is it worth doing that?
+- Why (and when) is it worth doing that?
 
 ## Anomaly Support Vector Machine 
 
 <div class="columns-2">
+
+<div style="padding-bottom: 200px;">
 Learning functions in space spanned by (representers) of normal samples
 
 $$
@@ -109,9 +129,10 @@ f(x) = \sum_i c_i k(x, z_i) + d
 $$
 
 where $z_i$ are _normal_ observations.
+</div>
 
 <div class="centered">
-<img src="img/asvm_similarity.png" style="max-height: 90%; max-width: 90%;"/>
+<img src="img/asvm_similarity.png" style="height: 400px;"/>
 </div>
 
 </div>
@@ -119,14 +140,18 @@ where $z_i$ are _normal_ observations.
 ## Anomaly Support Vector Machine 
 
 <div class="columns-2">
+
+<div style="padding-bottom: 200px;">
 Estimated as solution to optimization problem (like regular SVM) by solving
 
 $$
 \min_{c,d} \sum_j (1-y_jf_j)_+ + c'\tilde{K}c
 $$
 
-with $f_j = \sum_i c_i k(x_j,z_i) + d$, and  
-$\tilde{K}=K_s K_n^{-1} K_s$
+with $f_j = \sum_i c_i k(x_j,z_i) + d$   
+
+and $\tilde{K}=K_s K_n^{-1} K_s$
+</div>
 
 <div class="centered">
 <img src="img/kernels.png" style="max-width: 80%; max-height: 80%;"/>
@@ -136,9 +161,9 @@ $\tilde{K}=K_s K_n^{-1} K_s$
 
 ## Anomaly Support Vector Machine
 
->- Based on leave-one-out error bounds (via stability arguments)
+>- Using leave-one-out error bounds (via stability arguments)  
 >- $K \succeq \tilde{K}$, implies LOO error bound of Anomaly SVM is lower than LOO error bound of standard pairwise between anomalies SVM
->- Proof uses arguments based on the SVM path algorithm, and required conditions
+>- Proof uses arguments based on the SVM path algorithm, and mild conditions
 
 ## Stability and accuracy of Anomaly SVM 
 
@@ -148,7 +173,7 @@ $\tilde{K}=K_s K_n^{-1} K_s$
 
 Prediction of high vs. low relapse risk in lung cancer 
 
-## Stability and accuracy of Anomaly SVM 
+---
 
 <div class="centered">
 <img src="img/asvm_ctg.png" style="max-height: 50%; max-width: 50%;"/>
