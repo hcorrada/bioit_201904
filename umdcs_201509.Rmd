@@ -10,7 +10,6 @@ output:
     css: hcb_styles.css
     widescreen: true
     logo: "img/logo.png"
-    template: ioslides_template.html
 ---
 
 ---

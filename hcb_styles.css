@@ -3,8 +3,12 @@ aside.gdbar {
 }
 
 aside.gdbar img {
-  width: 200px;
-  height: 200px;
+  width: 192px;
+  height: 96px;
+}
+
+slides > slide:not(.nobackground):before {
+  height: 0px;
 }
 
 .title-slide hgroup h1 {
