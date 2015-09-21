@@ -48,7 +48,7 @@ platform
 ---
 
 <div class="centered">
-<img src="img/epiviz_2_logo_medium.png" style="max-height: 40%; max-width: 40%"/>
+<img src="img/epiviz_logo_large_white.png" style="max-height: 40%; max-width: 40%"/>
 </div>
 
 
@@ -60,24 +60,23 @@ platform
 - Reproducible dissemination
 - Communication with R/Bioconductor: `epivizr` package
 
-e.g.: http://epiviz.cbcb.umd.edu/ws=45KBV4C7z3u
+e.g.: http://epiviz.cbcb.umd.edu/?ws=YOsu0RmUc9l
 <footer class="source">[Nat. Methods, 2014]</footer>
 
 ---
 
-<iframe data-src="http://epiviz.cbcb.umd.edu/?ws=W3ieGz19icm" width="99%"></iframe>
+<iframe src="http://epiviz.cbcb.umd.edu/?ws=YOsu0RmUc9l" height="800"></iframe>
 
 ---
 
----
-
-### Creativity in exploration
+**Creativity in exploration**
 
 We are building software systems to support creative exploratory analysis of large genome-wide datasets...
 
 <div class="centered">
 <img src="img/terry.png" style="max-height: 60%; max-width: 60%"/>
 </div>
+
 <footer class="source">[T. Speed]</footer>
 
 ---
@@ -85,17 +84,17 @@ We are building software systems to support creative exploratory analysis of lar
 **Computed Measurements**: create new measurements from integrated measurements and visualize
 
 <div class="centered">
-<video width="75%" height="75%" autoplay>
+<video height="500" controls>
   <source src="movies/transform_customize_v2.mp4" type="video/mp4">
 </video>
 </div>
 
 ---
 
-**Summarization on the fly**: create new measurements from integrated measurements and visualize
+**Summarization**: summarize integrated measurements (computed on data subsets)
 
 <div class="centered">
-<video width="75%" height="75%" autoplay>
+<video height="500" controls>
   <source src="movies/transform_aggregate.mp4" type="video/mp4">
 </video>
 </div>
@@ -115,9 +114,6 @@ region_stat <- calcWindowStat(m, step=25, window=80, stat=rowSds)
 s <- region_stat[,"stat"]
 ```
 
---- 
-
-**Statistically-guided exploration**:
 Explore data based on statistic
 
 _What's around the regions with highest across CpG variability?_
@@ -133,7 +129,7 @@ mgr$slideshow(slideShowRegions)
 ---
 
 <div class="centered">
-<video width="75%" height="75%" autoplay>
+<video height="550" controls>
   <source src="movies/guided_exploration_v2.mp4" type="video/mp4">
 </video>
 </div>
@@ -142,11 +138,6 @@ mgr$slideshow(slideShowRegions)
 
 **dynamically extensible**: 
 Easily integrate new data types and add new visualizations.
-
-http://epiviz.cbcb.umd.edu/?gist[]=11017650&ws=Y8kWxCO2Ajn
-<iframe data-src="http://epiviz.cbcb.umd.edu/?gist[]=11017650&ws=Y8kWxCO2Ajn"></iframe>
-
----
 
 <div class="centered">
 <img src="img/datatypes.png" style="max-width=50%; min-width=50%"/>
@@ -157,8 +148,11 @@ http://epiviz.cbcb.umd.edu/?gist[]=11017650&ws=Y8kWxCO2Ajn
 
 ---
 
-http://epiviz.cbcb.umd.edu/?ws=SRHZlWRRAPd&gist[]=a82a998817564ce3fe48&settings=default&
-<iframe data-src="http://epiviz.cbcb.umd.edu/?ws=SRHZlWRRAPd&gist[]=a82a998817564ce3fe48&settings=default&"></iframe>
+<div class="centered">
+<video height="550" controls>
+  <source src="movies/finance.mp4" type="video/mp4">
+</video>
+</div>
 
 ---
 
@@ -177,7 +171,7 @@ One interpretation of *Big Data* is *Many relevant sources of contextual data*
 
 ---
 
-### Visualization goals
+**Visualization goals**
 
 - Context 
   - Integrate and align multiple data sources; navigate; search
@@ -188,6 +182,8 @@ One interpretation of *Big Data* is *Many relevant sources of contextual data*
 <footer class="source">[Perer & Shneiderman]</footer>
 
 ---
+
+**Visualization goals**
 
 - Data
   - *Select and filter*: tight-knit integration with R/Bioconductor; 

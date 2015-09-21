@@ -106,13 +106,13 @@ My group's work as a simplex
 - Tools: computational and visual exploratory genomic data analysis
 
 <div class="centered">
-<img src="img/hcbravolab_simplex.png" style="height: 200px;"/>
+<img src="img/hcbravolab_simplex.png" style="height: 400px;"/>
 </div>
 
 ## Metagenomics (mixed genomes)
 
 <div class="centered">
-<img src="img/hmp.png" style="max-width=50%; min-width=50%"/>
+<img src="img/hmp.png" style="height: 400px;"/>
 </div>
 
 <footer class="source">[Human Microbiome Project]</footer>
@@ -129,14 +129,14 @@ My group's work as a simplex
 **Coordinates**:
 
 <div class="centered">
-<img src="img/tree.png" style="max-width=1%; min-width=1%"/>
+<img src="img/tree.png" style="height: 700px;"/>
 </div>
 
 ---
 
 **Samples**:
 <div class="centered">
-<img src="img/meta_heatmap.jpg" style="max-width=50%; min-width=50%"/>
+<img src="img/meta_heatmap.jpg" style="height: 500px;"/>
 </div>
 
 
@@ -154,14 +154,14 @@ Hierachically organized features
 Hierarchically organized features
 
 <div class="centered">
-<video width="75%" height="75%">
+<video height="500" controls>
   <source src="movies/metavizr1.mp4" type="video/mp4">
 </video>
 </div>
 
 ---
 
-### NHGRI strategic plan
+**NHGRI strategic plan**
 
 "Meeting the computational challenges for genomics requires scientists with expertise in biology as well as in informatics, computer science, mathematics, statistics and/or engineering." 
 
@@ -169,13 +169,19 @@ _A new generation of investigators who are proficient in two or more of these fi
 
 ---
 
-###Acknowledgements
-Colleagues at CBCB  
-Past members of HCBravo group (now at Harvard, U. Chicago, Johns Hopkins, Genentech, Dow Jones Data Science)  
-Current members of HCBravo group  
-Collaborators at JHU/Harvard: Jeff Leek, Rafael A. Irizarry, Andy Feinberg, Winston Timp, Kasper Hansen, and Ben Langmead 
+**Acknowledgements**  
 
-###More information
+Past members of HCBravo group  
+_now at Harvard, U. Chicago, Johns Hopkins, Genentech, Dow Jones Data Science_
+
+Colleagues at CBCB  
+Current members of HCBravo group  
+Collaborators at JHU/Harvard 
+
+Funding: NIH, Genentech, Gates Foundation  
+
+**More information**
+
 [http://hcbravo.org](http://hcbravo.org)  
 [\@hcorrada](https://twitter.com/hcorrada)    
 
