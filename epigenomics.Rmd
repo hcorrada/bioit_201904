@@ -1,4 +1,4 @@
-## What is Epigenomics? 
+## What is epigenomics? 
 
 **What makes them different?**
 
@@ -61,7 +61,7 @@ DNA methylation is a chemical modification of DNA, involved in *gene expression*
 - plasticity
 </div>
 
-## Probing DNA Methylation
+## Probing DNA methylation
 
 <div class="centered">
 <img src="img/meth_cartoon.png" style="height: 575px;"/>
@@ -101,7 +101,7 @@ DNA methylation is a chemical modification of DNA, involved in *gene expression*
 <img src="img/data_table3.png" style="height: 550px;"/>
 </div>
 
-## Probing DNA Methylation
+## Probing DNA methylation
 
 <div class="columns-2">
 
@@ -120,7 +120,7 @@ DNA methylation is a chemical modification of DNA, involved in *gene expression*
 
 </div>
 
-## DNA Methylation in cancer
+## DNA methylation in cancer
 
 <div class="centered">
 <img src="img/block.png" style="max-height: 100%; max-width: 100%"/>

@@ -13,15 +13,24 @@ output:
 
 ---
 
-<div class="centered">
-<img src="img/stickmen.png" style="max-height: 50%; max-width: 50%"/>
-</div>
+**What does my group do?**
 
+<div class="columns-2">
+
+<div style="padding-bottom: 400px;">
 - Study the **molecular** basis of *variation* in development and disease
 - Using **high-throughput** experimental methods
+</div>
+
+<div class="centered">
+<img src="img/stickmen.png" style="height: 400px;"/>
+</div>
+
+</div>
 
 
-## The Genomic Revolution
+
+## The genomic revolution
 
 - For over a decade we have laid the basic molecular blueprint by **sequencing** DNA
 
