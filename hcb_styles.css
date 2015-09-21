@@ -1,3 +1,16 @@
+aside.gdbar {
+  height: 0px;  
+}
+
+aside.gdbar img {
+  width: 200px;
+  height: 200px;
+}
+
+.title-slide hgroup h1 {
+  line-height: 1;
+}
+
 .hcb_image img {
   max-height: 756px;
   display: block;
