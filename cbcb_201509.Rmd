@@ -1,0 +1,198 @@
+---
+title: "Visualization, statistical modeling and discovery in computational epigenomics"
+author: |
+  Héctor Corrada Bravo   
+  Center for Bioinformatics and Computational Biology  
+  University of Maryland, College Park  
+date: September 21, 2015
+output: 
+  ioslides_presentation:
+    css: hcb_styles.css
+    widescreen: true
+    logo: "img/logo.png"
+---
+
+---
+
+**What does my group do?**
+
+<div class="columns-2">
+
+<div style="padding-bottom: 400px;">
+- Study the **molecular** basis of *variation* in development and disease
+- Using **high-throughput** experimental methods
+</div>
+
+<div class="centered">
+<img src="img/stickmen.png" style="height: 400px;"/>
+</div>
+
+</div>
+
+
+
+## The genomic revolution
+
+- For over a decade we have laid the basic molecular blueprint by **sequencing** DNA
+
+<div class="centered">
+<img src="img/genome_projects.png" style="max-height: 100%; max-width: 100%"/>
+</div>
+
+---
+
+**NHGRI strategic plan**
+
+<div class="centered">
+<img src="img/basepair_bedside.png" style="max-height: 100%; max-width: 100%"/>
+</div>
+
+<footer class="source">[Nature, 2011]</footer>
+
+---
+
+**NHGRI strategic plan**
+
+"The major bottleneck in genome sequencing is no longer **data generation**—the computational challenges around **data analysis**, display and integration are now rate limiting. New approaches and methods are required to meet these challenges."
+
+- Data analysis 
+- Data integration
+- Visualization
+- Computational tools and infrastructure
+
+<footer class="source">[Nature, 2011]</footer>
+
+---
+
+My group's work as a simplex
+
+<div class="centered">
+<img src="img/hcbravolab_simplex.png" style="height: 500px;"/>
+</div>
+
+# Computational Epigenomics
+
+```{r child='epigenomics.Rmd' }
+```
+
+```{r child='antiprofiles.Rmd' }
+```
+
+```{r child='methylflow.Rmd' }
+```
+
+## Moving forward
+
+>- move anti-profiles closer to the clinic
+>- explore _anomaly classification_ as a general learning setting
+>- methods to understand hierarchical organization of epigenomic domains
+>- better understand connection between intra-tumor heterogeneity and consistent hyper-variability in cancer
+
+---
+
+- Discoveries: consistent hypo-methylation, hyper-variability
+- Methods: anomaly classification as a setting to understand predictor stability
+- Tools
+
+<div class="centered">
+<img src="img/hcbravolab_simplex.png" style="height: 400px;"/>
+</div>
+
+
+```{r child='epiviz.Rmd' }
+```
+
+## Moving forward
+
+- collaborative computational and visual analysis (w/ N. Elmqvist @ HCIL)
+- effective visual methods to explore hierarchical organization of genome
+- deeper integration of statistically-informed visualization
+- visualization-informed statistical analysis
+
+---
+
+- Discoveries: consistent hypo-methylation, hyper-variability
+- Methods: anomaly classification as a setting to understand predictor stability
+- Tools: computational and visual exploratory genomic data analysis
+
+<div class="centered">
+<img src="img/hcbravolab_simplex.png" style="height: 400px;"/>
+</div>
+
+## Metagenomics (mixed genomes)
+
+<div class="centered">
+<img src="img/hmp.png" style="height: 400px;"/>
+</div>
+
+<footer class="source">[Human Microbiome Project]</footer>
+
+
+## Metagenomics (mixed genomes)
+
+- Discoveries: pathogenic associations for childhood diarrhea in developing world. (Genome Biology, 2014)
+- Methods: association discovery for metagenomic communities. (Nature Methods, 2013)
+- Tools: `metagenomeSeq`, `metagenomicFeatures`, `metaviz`
+
+---
+
+**Coordinates**:
+
+<div class="centered">
+<img src="img/tree.png" style="height: 700px;"/>
+</div>
+
+---
+
+**Samples**:
+<div class="centered">
+<img src="img/meta_heatmap.jpg" style="height: 500px;"/>
+</div>
+
+
+---
+
+
+<div class="centered">
+<img src="img/data_sources_with_hierarchy.png" style="max-height: 45%; max-width: 45%"/>
+</div>
+
+Hierachically organized features
+
+---
+
+Hierarchically organized features
+
+<div class="centered">
+<video height="500" controls>
+  <source src="movies/metavizr1.mp4" type="video/mp4">
+</video>
+</div>
+
+---
+
+**NHGRI strategic plan**
+
+"Meeting the computational challenges for genomics requires scientists with expertise in biology as well as in informatics, computer science, mathematics, statistics and/or engineering." 
+
+_A new generation of investigators who are proficient in two or more of these fields must be trained and supported._
+
+---
+
+**Acknowledgements**  
+
+Past members of HCBravo group  
+_now at Harvard, U. Chicago, Johns Hopkins, Genentech, Dow Jones Data Science_
+
+Colleagues at CBCB  
+Current members of HCBravo group  
+Collaborators at JHU/Harvard 
+
+Funding: NIH, Genentech, Gates Foundation  
+
+**More information**
+
+[http://hcbravo.org](http://hcbravo.org)  
+[\@hcorrada](https://twitter.com/hcorrada)    
+
+
