@@ -1,0 +1,56 @@
+---
+title: "Computation and visualization over hierarchically organized features"
+author: 
+  name: "Héctor Corrada Bravo"
+  company: "Center for Bioinformatics and Computational Biology, University of Maryland"
+date: August 3, 2016
+output: 
+  ioslides_presentation:
+    css: hcb_styles.css
+    logo: img/logo.png
+    widescreen: yes
+---
+
+---
+
+**What does my group do?**
+
+<div class="columns-2">
+
+<div style="padding-bottom: 400px;">
+- Study the **molecular** basis of *variation* in development and disease
+- Using **high-throughput** experimental methods
+</div>
+
+<div class="centered">
+<img src="img/stickmen.png" style="height: 400px;"/>
+</div>
+
+</div>
+
+```{r child='epiviz.Rmd' }
+```
+
+```{r child='metaviz.Rmd'}
+```
+
+---
+
+**Acknowledgements**  
+
+Florin Chelaru (now at Twinfog), Joseph Paulson (now at Harvard)  
+Justin Wagner, Jayaram Kancherla (CBCB)    
+Mihai Pop (CBCB)    
+HMP2 Project
+
+Funding: NIH, Genentech, Gates Foundation  
+
+**More information**
+
+[http://hcbravo.org](http://hcbravo.org)  
+[\@hcorrada](https://twitter.com/hcorrada)    
+
+
+
+
+

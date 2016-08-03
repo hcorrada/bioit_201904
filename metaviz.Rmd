@@ -1,0 +1,102 @@
+## Metagenomics (mixed genomes)
+
+<div class="columns-2">
+
+<div class="centered">
+<img src="img/hmp.png" style="height: 400px;"/>
+</div>
+
+<div>
+- Discoveries: pathogenic associations for childhood diarrhea in developing world. (Genome Biology, 2014)
+- Methods: association discovery for metagenomic communities. (Nature Methods, 2013)
+- Tools: `metagenomeSeq`, `metagenomicFeatures`, `metaviz`
+</div>
+
+<footer class="source">[Human Microbiome Project]</footer>
+
+## Metagenomics (mixed genomes)
+
+What is the measurement?
+
+<div class="centered">
+<img src="img/meta_profile1.png" style="height: 400px;"/>
+</div>
+
+## Metagenomics (mixed genomes)
+
+What is the measurement?
+
+<div class="centered">
+<img src="img/meta_profile2.png" style="height: 400px;"/>
+</div>
+
+---
+
+**Samples**:
+<div class="centered">
+<img src="img/meta_heatmap.jpg" style="height: 500px;"/>
+</div>
+
+
+---
+
+**Features**:
+
+<div class="centered">
+<img src="img/tree.png" style="height: 700px;"/>
+</div>
+
+---
+
+<div class="centered">
+<img src="img/data_sources_with_hierarchy.png" style="max-height: 45%; max-width: 45%"/>
+</div>
+
+Hierachically organized features
+
+---
+
+Hierarchically organized features
+
+<div class="centered">
+<video height="500" controls>
+<source src="movies/metavizr1.mp4" type="video/mp4">
+</video>
+</div>
+
+---
+
+Defining the measurement unit of analysis
+
+<div class="centered">
+<video width="75%" height="75%" controls>
+  <source src="movies/metavizr2.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+</div>
+
+---
+
+Not just features, but samples may be hierarchically organized
+
+<div class="centered">
+<img src="img/pca_v03.png" style="max-width: 65%; max-height: 65%"/>
+</div>
+
+## Challenges
+
+- Underlying idea: _cut_ in the tree defines unit of analysis
+
+> - Visual design challenges: how to support _effective_ exploration of cuts (persistence, consistency, density)
+
+> - Data challenges: how to support _efficient_ exploration of cuts (graph database backend for _contextual_ data)
+
+> - Engineering challenges: when do analysis patterns become interaction modes
+
+## Summary
+
+> - Extend interactive (and creative) data exploration and analysis to metagenomic data 
+> - Design exploration of hierarchical domains with statistical analysis as the ultimate goal
+> - Collaborative, reproducible, with close connection with R/Bioconductor (`metagenomeSeq`, `metagenomeFeatures`, `metavizr`)
+

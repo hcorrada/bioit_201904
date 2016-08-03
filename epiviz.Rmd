@@ -1,4 +1,4 @@
-## Tools
+## Software
 
 <div class="columns-2">
 
@@ -14,13 +14,15 @@ platform
 </div>
 
 <div>
+- `metagenomeSeq`
+- `metagenomeFeatures`
 - `antiProfiles`
 - `minfi`
 - `bumphunter`
-- `Rcplex`
-- `Rcsdp`
 - `HTShape`
 - `qsmooth`
+- `Rcplex`
+- `Rcsdp`
 </div>
 
 </div>
@@ -29,12 +31,11 @@ platform
 
 **Collaborative and exploratory analysis**
 
-> - Data transformation and modeling: data smoothing, region finding (R/Bioconductor: `Bsmooth`, `minfi`)
-> - Genome browsing: search by gene, search by overlap
-> - Region analysis: overlap with other data (our own, other labs, UCSC, ensembl)
-> - Regulation: expression data (Gene Expression Barcode)
+> - *Data transformation and modeling*: data smoothing, region finding (R/Bioconductor: `Bsmooth`, `minfi`)
+> - *Exploration*: search by gene, search by overlap
+> - *Contextual analysis*: overlap with other data (our own, other labs, UCSC, ensembl)
 
-## Genomic Data Science! 
+## Genomic Data Science  
 
 - We have unprecedented ability to measure
 - and lots of publicly available data to contextualize it
@@ -65,29 +66,19 @@ e.g.: http://epiviz.cbcb.umd.edu/?ws=YOsu0RmUc9l
 
 ---
 
-<iframe src="http://epiviz.cbcb.umd.edu/?ws=YOsu0RmUc9l" height="800"></iframe>
+<iframe src="http://epiviz.cbcb.umd.edu/?ws=clHVLu0BQti" height="800"></iframe>
 
 ---
 
 **Creativity in exploration**
 
-We are building software systems to support creative exploratory analysis of large genome-wide datasets...
+We are building software applications to support creative exploratory analysis of large genome-wide datasets...
 
 <div class="centered">
 <img src="img/terry.png" style="max-height: 60%; max-width: 60%"/>
 </div>
 
 <footer class="source">[T. Speed]</footer>
-
----
-
-**Computed Measurements**: create new measurements from integrated measurements and visualize
-
-<div class="centered">
-<video height="500" controls>
-  <source src="movies/transform_customize_v2.mp4" type="video/mp4">
-</video>
-</div>
 
 ---
 
@@ -156,22 +147,7 @@ Easily integrate new data types and add new visualizations.
 
 ---
 
-<div class="centered">
-<img src="img/hadley.png" style="max-height: 50%; max-width: 50%"/>
-<img src="img/hadley2.png" style="max-height: 30%; max-width: 30%"/>
-<footer class="source">[H. Wickham]</footer>
-</div>
-
-One interpretation of *Big Data* is *Many relevant sources of contextual data*
-
-- Easily access/integrate *contextual* data
-- Driven by exploratory analysis of *immediate* data
-- Iterative process
-- Visual and computational exploration go hand in hand
-
----
-
-**Visualization goals**
+**Visualization design goals**
 
 - Context 
   - Integrate and align multiple data sources; navigate; search
@@ -192,4 +168,20 @@ One interpretation of *Big Data* is *Many relevant sources of contextual data*
   - New 'measurements' the result of modeling; perhaps suggested by data context
 
 <footer class="source">[Perer & Shneiderman]</footer>
+
+
+---
+
+<div class="centered">
+<img src="img/hadley.png" style="max-height: 50%; max-width: 50%"/>
+<img src="img/hadley2.png" style="max-height: 30%; max-width: 30%"/>
+<footer class="source">[H. Wickham]</footer>
+</div>
+
+One interpretation of *Big Data* is *Many relevant sources of contextual data*
+
+- Easily access/integrate *contextual* data
+- Driven by exploratory analysis of *immediate* data
+- Iterative process
+- Visual and computational exploration go hand in hand
 
