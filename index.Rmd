@@ -1,9 +1,9 @@
 ---
-title: "Computation and visualization over hierarchically organized features"
+title: "Statistics and visualization for metagenomic data"
 author: 
   name: "Héctor Corrada Bravo"
   company: "Center for Bioinformatics and Computational Biology, University of Maryland"
-date: August 3, 2016
+date: October 13, 2016
 output: 
   ioslides_presentation:
     css: hcb_styles.css
@@ -13,20 +13,11 @@ output:
 
 ---
 
-**What does my group do?**
+**My history here**
 
-<div class="columns-2">
-
-<div style="padding-bottom: 400px;">
-- Study the **molecular** basis of *variation* in development and disease
-- Using **high-throughput** experimental methods
-</div>
-
-<div class="centered">
-<img src="img/stickmen.png" style="height: 400px;"/>
-</div>
-
-</div>
+- Postdoc with Rafa Irizarry at JHU 2008-2010
+- Spoke at symposium 2009 (I think)
+- Won "worst poster" award at symposium 2008, still wear that shirt proudly
 
 ```{r child='epiviz.Rmd' }
 ```
@@ -38,10 +29,11 @@ output:
 
 **Acknowledgements**  
 
-Florin Chelaru (now at Twinfog), Joseph Paulson (now at Harvard)  
 Justin Wagner, Jayaram Kancherla (CBCB)    
-Mihai Pop (CBCB)    
-HMP2 Project
+Florin Chelaru (now at Twinfog), Joseph Paulson (now at Harvard)  
+Mihai Pop (CBCB)
+Feinberg Lab & K. Hansen (JHU), R. Irizarry (Harvard)
+HMP2 Project (Xavier and Huttenhower, Harvard)
 
 Funding: NIH, Genentech, Gates Foundation  
 

@@ -46,6 +46,38 @@ What is the measurement?
 <img src="img/tree.png" style="height: 700px;"/>
 </div>
 
+## Challenges for epidemiological metagenomic studies
+
+- Analysis units (features) unknown a priori
+- High levels of sparsity
+- Standard normalization methods don't work well
+- Confounders, i.e. study site, countries, etc.
+- Large number of features (Type 1 error control)
+
+## Normalization
+
+<div class="centered">
+<img src="img/css.png" style="height: 700px;"/>
+</div>
+
+## Zero-inflation
+
+<div class="centered">
+<img src="img/zinf1.png" style="height: 700px;"/>
+</div>
+
+## Zero-inflation
+
+<div class="centered">
+<img src="img/zinf2.png" style="height: 500px;"/>
+</div>
+
+## Zero-inflation
+
+<div class="centered">
+<img src="img/zinf3.png" style="height: 500px;"/>
+</div>
+
 ---
 
 <div class="centered">
@@ -96,7 +128,7 @@ Not just features, but samples may be hierarchically organized
 
 ## Summary
 
-> - Extend interactive (and creative) data exploration and analysis to metagenomic data 
+> - Systems for interactive (and creative) data exploration and analysis of epigenomic and metagenomic data
 > - Design exploration of hierarchical domains with statistical analysis as the ultimate goal
 > - Collaborative, reproducible, with close connection with R/Bioconductor (`metagenomeSeq`, `metagenomeFeatures`, `metavizr`)
 
