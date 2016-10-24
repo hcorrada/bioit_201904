@@ -57,55 +57,49 @@ What is the measurement?
 ## Normalization
 
 <div class="centered">
-<img src="img/css.png" style="height: 700px;"/>
+<img src="img/css.png" style="height: 600px;"/>
+</div>
+
+---
+
+<div class="centered">
+<img src="img/normalization_cor.png" style="height: 600px;"/>
 </div>
 
 ## Normalization
 
 <div class="centered">
-<img src="img/normalization_cor.png" style="height: 700px;"/>
+<img src="img/normalization_cor2.png" style="height: 500px;"/>
 </div>
 
 ## Normalization
 
 <div class="centered">
-<img src="img/normalization_cor2.png" style="height: 700px;"/>
+<img src="img/normalization_cor3.png" style="height: 500px;"/>
 </div>
 
 ## Normalization
 
 <div class="centered">
-<img src="img/normalization_cor3.png" style="height: 700px;"/>
-</div>
-
-## Normalization
-
-<div class="centered">
-<img src="img/normalization_nonlinearity.png" style="height: 700px;"/>
+<img src="img/normalization_nonlinearity.png" style="height: 500px;"/>
 </div>
 
 ## Zero-inflation
 
 <div class="centered">
-<img src="img/zinf1.png" style="height: 700px;"/>
+<img src="img/zinf1.png" style="height: 600px;"/>
 </div>
 
 ## Zero-inflation
 
 <div class="centered">
-<img src="img/zinf_notrnaseq.png" style="height: 700px;"/>
+<img src="img/zinf_notrnaseq.png" style="height: 600px;"/>
 </div>
 
 ## Zero-inflation
 
 <div class="centered">
 <img src="img/zinf2.png" style="height: 500px;"/>
-</div>
-
-## Zero-inflation
-
-<div class="centered">
-<img src="img/zinf3.png" style="height: 500px;"/>
 </div>
 
 ## Zero-inflation
@@ -183,7 +177,7 @@ What is the measurement?
 ## `MetagenomeSeq`
 
 <div class="centered">
-<img src="img/gems7.png" style="height: 500px;"/>
+<img src="img/gems8.png" style="height: 500px;"/>
 </div>
 
 ## Summary

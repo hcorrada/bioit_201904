@@ -3,7 +3,7 @@ title: "Statistics and visualization for metagenomic data"
 author: 
   name: "Héctor Corrada Bravo"
   company: "Center for Bioinformatics and Computational Biology, University of Maryland"
-date: October 13, 2016
+date: October 24, 2016
 output: 
   ioslides_presentation:
     css: hcb_styles.css
@@ -50,6 +50,12 @@ Funding: NIH, Genentech, Gates Foundation
 
 [http://hcbravo.org](http://hcbravo.org)  
 [\@hcorrada](https://twitter.com/hcorrada)    
+
+---
+
+<div class="centered">
+<img src="img/m3promo.png" style="height: 600px;"/>
+</div>
 
 
 
