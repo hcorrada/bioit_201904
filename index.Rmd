@@ -13,11 +13,20 @@ output:
 
 ---
 
-**My history here**
+**What does my group do?**
 
-- Postdoc with Rafa Irizarry at JHU 2008-2010
-- Spoke at symposium 2009 (I think)
-- Won "worst poster" award at symposium 2008, still wear that shirt proudly
+<div class="columns-2">
+
+<div style="padding-bottom: 400px;">
+- Study the **molecular** basis of *variation* in development and disease
+- Using **high-throughput** experimental methods
+</div>
+
+<div class="centered">
+<img src="img/stickmen.png" style="height: 400px;"/>
+</div>
+
+</div>
 
 ```{r child='epiviz.Rmd' }
 ```

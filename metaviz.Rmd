@@ -60,10 +60,40 @@ What is the measurement?
 <img src="img/css.png" style="height: 700px;"/>
 </div>
 
+## Normalization
+
+<div class="centered">
+<img src="img/normalization_cor.png" style="height: 700px;"/>
+</div>
+
+## Normalization
+
+<div class="centered">
+<img src="img/normalization_cor2.png" style="height: 700px;"/>
+</div>
+
+## Normalization
+
+<div class="centered">
+<img src="img/normalization_cor3.png" style="height: 700px;"/>
+</div>
+
+## Normalization
+
+<div class="centered">
+<img src="img/normalization_nonlinearity.png" style="height: 700px;"/>
+</div>
+
 ## Zero-inflation
 
 <div class="centered">
 <img src="img/zinf1.png" style="height: 700px;"/>
+</div>
+
+## Zero-inflation
+
+<div class="centered">
+<img src="img/zinf_notrnaseq.png" style="height: 700px;"/>
 </div>
 
 ## Zero-inflation
@@ -77,6 +107,90 @@ What is the measurement?
 <div class="centered">
 <img src="img/zinf3.png" style="height: 500px;"/>
 </div>
+
+## Zero-inflation
+
+<div class="centered">
+<img src="img/zinf_model.png" style="height: 500px;"/>
+</div>
+
+## Zero-inflation
+
+<div class="centered">
+<img src="img/zinf_model2.png" style="height: 500px;"/>
+</div>
+
+## Zero-inflation
+
+<div class="centered">
+<img src="img/zinf_model3.png" style="height: 500px;"/>
+</div>
+
+## Zero-inflation
+
+<div class="centered">
+<img src="img/zinf3.png" style="height: 500px;"/>
+</div>
+
+## `MetagenomeSeq`
+
+<div class="centered">
+<img src="img/metagenomeseq.png" style="height: 500px;"/>
+</div>
+
+## `MetagenomeSeq`
+
+<div class="centered">
+<img src="img/gems.png" style="height: 500px;"/>
+</div>
+
+## `MetagenomeSeq`
+
+<div class="centered">
+<img src="img/gems2.png" style="height: 500px;"/>
+</div>
+
+## `MetagenomeSeq`
+
+<div class="centered">
+<img src="img/gems3.png" style="height: 500px;"/>
+</div>
+
+## `MetagenomeSeq`
+
+<div class="centered">
+<img src="img/gems4.png" style="height: 500px;"/>
+</div>
+
+## `MetagenomeSeq`
+
+<div class="centered">
+<img src="img/gems5.png" style="height: 500px;"/>
+</div>
+
+## `MetagenomeSeq`
+
+<div class="centered">
+<img src="img/gems6.png" style="height: 500px;"/>
+</div>
+
+## `MetagenomeSeq`
+
+<div class="centered">
+<img src="img/gems7.png" style="height: 500px;"/>
+</div>
+
+## `MetagenomeSeq`
+
+<div class="centered">
+<img src="img/gems7.png" style="height: 500px;"/>
+</div>
+
+## Summary
+
+- Diarrheal study consisting ~1000 samples (now ~3000). 
+- Interesting microbiome for four countries / through ages
+- Novel normalization and differential abundance testing framework for marker-gene surveys
 
 ---
 

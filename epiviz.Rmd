@@ -82,6 +82,17 @@ We are building software applications to support creative exploratory analysis o
 
 ---
 
+**Summarization**: summarize integrated measurements (computed on data subsets)
+
+<div class="centered">
+<video height="500" controls>
+  <source src="movies/transform_aggregate.mp4" type="video/mp4">
+</video>
+</div>
+
+
+---
+
 **Statistically-guided exploration**: 
 Calculate a statistic of interest
 
@@ -125,6 +136,14 @@ Easily integrate new data types and add new visualizations.
 
 - Based on classic "three-table" design in genomic data analysis
 - **Data providers define coordinate space**
+
+---
+
+<div class="centered">
+<video height="550" controls>
+  <source src="movies/finance.mp4" type="video/mp4">
+</video>
+</div>
 
 ---
 
