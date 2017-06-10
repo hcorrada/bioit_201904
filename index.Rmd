@@ -1,9 +1,9 @@
 ---
-title: "Statistics and visualization for metagenomic data"
+title: "Interactive visual and computational exploratory analysis of epigenetic data"
 author: 
   name: "Héctor Corrada Bravo"
   company: "Center for Bioinformatics and Computational Biology, University of Maryland"
-date: October 24, 2016
+date: June 14, 2017
 output: 
   ioslides_presentation:
     css: hcb_styles.css
@@ -28,10 +28,10 @@ output:
 
 </div>
 
-```{r child='epiviz.Rmd' }
+```{r child='epigenomics.Rmd'}
 ```
 
-```{r child='metaviz.Rmd'}
+```{r child='epiviz.Rmd' }
 ```
 
 ---
@@ -39,10 +39,8 @@ output:
 **Acknowledgements**  
 
 Justin Wagner, Jayaram Kancherla (CBCB)    
-Florin Chelaru (now at Twinfog), Joseph Paulson (now at Harvard)  
-Mihai Pop (CBCB)
+Florin Chelaru (now at Google), Joseph Paulson (now at Genentech)  
 Feinberg Lab & K. Hansen (JHU), R. Irizarry (Harvard)
-HMP2 Project (Xavier and Huttenhower, Harvard)
 
 Funding: NIH, Genentech, Gates Foundation  
 
@@ -51,11 +49,6 @@ Funding: NIH, Genentech, Gates Foundation
 [http://hcbravo.org](http://hcbravo.org)  
 [\@hcorrada](https://twitter.com/hcorrada)    
 
----
-
-<div class="centered">
-<img src="img/m3promo.png" style="height: 600px;"/>
-</div>
 
 
 
