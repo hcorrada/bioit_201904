@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen:300,400,700');
+
+body {font-family: 'Oxygen', sans-serif;}
+h1, h2, h3 {
+  font-family: 'Oxygen';
+  font-weight: normal;
+}
+
+.title-slide {
+  background-image: url('img/epiviz.jpg');
+  background-size: cover;
+}
+
+.title-slide .remark-slide-number {display: none;}
+.title-slide .title {
+  font-size: 200%;
+  font-weight: bold;
+}
+
+.title-slide .author {
+  font-size: 140%;
+  font-weight: regular;
+}
+
+.title-slide .other-info {
+  font-size: 120%;
+  font-weight: regular;
+}
+
+.column:first-of-type {float:left;}
+.column:last-of-type {float:right;}
+
+.split-50 .column:first-of-type {width: 50%;}
+.split-50 .column:first-of-type {width: 50%;}
+.split-60 .column:first-of-type {width: 60%;}
+.split-60 .column:last-of-type {width: 40%;}
+
+
+.image-50 img {width: 50%;}
+.image-60 img {width: 60%;}

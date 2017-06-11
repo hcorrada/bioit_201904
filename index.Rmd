@@ -1,37 +1,48 @@
 ---
 title: "Interactive visual and computational exploratory analysis of epigenetic data"
-author: 
-  name: "Héctor Corrada Bravo"
-  company: "Center for Bioinformatics and Computational Biology, University of Maryland"
+author: "Héctor Corrada Bravo"
+company: "Center for Bioinformatics and Computational Biology, University of Maryland"
 date: June 14, 2017
+css: ["default.css", "custom.css"]
 output: 
-  ioslides_presentation:
-    css: hcb_styles.css
-    logo: img/logo.png
-    widescreen: yes
+  xaringan::moon_reader:
+    lib_dir: libs
+    seal: false
 ---
+class: title-slide, center, middle
+
+
+.title[Interactive, visual and statistical exploration of epigenomic data]
+
+.author[Héctor Corrada Bravo]
+
+.other-info[
+Center for Bioinformatics and Computational Biology  
+University of Maryland, College Park, USA  
+June 14, 2017
+]
+
 
 ---
+class: split-50
 
-**What does my group do?**
+## What does my group do?
 
-<div class="columns-2">
+.column[
+Study the **molecular** basis of *variation* in development and disease
 
-<div style="padding-bottom: 400px;">
-- Study the **molecular** basis of *variation* in development and disease
-- Using **high-throughput** experimental methods
-</div>
 
-<div class="centered">
-<img src="img/stickmen.png" style="height: 400px;"/>
-</div>
+Using **high-throughput** experimental methods  
+]
 
-</div>
+.column[
+.right[.middle[.image-50[![](img/stickmen.png)]]]
+]
 
-```{r child='epigenomics.Rmd'}
+```{r child='epigenomics.Rmd', eval=FALSE}
 ```
 
-```{r child='epiviz.Rmd' }
+```{r child='epiviz.Rmd' , eval=FALSE}
 ```
 
 ---
