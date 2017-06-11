@@ -3,14 +3,16 @@ title: "Interactive visual and computational exploratory analysis of epigenetic 
 author: "Héctor Corrada Bravo"
 company: "Center for Bioinformatics and Computational Biology, University of Maryland"
 date: June 14, 2017
-css: ["default.css", "custom.css"]
+css: ["custom.css"]
 output: 
   xaringan::moon_reader:
     lib_dir: libs
+    chakra: libs/remark-latest.min.js
     seal: false
 ---
 class: title-slide, center, middle
 
+.banner[![](img/epiviz.png)]
 
 .title[Interactive, visual and statistical exploration of epigenomic data]
 
@@ -19,7 +21,7 @@ class: title-slide, center, middle
 .other-info[
 Center for Bioinformatics and Computational Biology  
 University of Maryland, College Park, USA  
-June 14, 2017
+VIZBI '17: June 14, 2017
 ]
 
 
