@@ -9,12 +9,15 @@ output:
     lib_dir: libs
     chakra: libs/remark-latest.min.js
     seal: false
+    includes:
+      afer_body: custom.html
 ---
 class: title-slide, center, middle
+count: false
 
 .banner[![](img/epiviz.png)]
 
-.title[Interactive, visual and statistical exploration of epigenomic data]
+.title[Interactive, visual and statistical exploratory analysis of epigenomic data]
 
 .author[Héctor Corrada Bravo]
 
@@ -24,6 +27,7 @@ University of Maryland, College Park, USA
 VIZBI '17: June 14, 2017
 ]
 
+.logo[![](img/logo.png)]
 
 ---
 class: split-50
@@ -37,14 +41,12 @@ Study the **molecular** basis of *variation* in development and disease
 Using **high-throughput** experimental methods  
 ]
 
-.column[
-.right[.middle[.image-50[![](img/stickmen.png)]]]
-]
+.column[.image-80[![](img/stickmen.png)]]
 
-```{r child='epigenomics.Rmd', eval=FALSE}
+```{r child='epigenomics.Rmd'}
 ```
 
-```{r child='epiviz.Rmd' , eval=FALSE}
+```{r child='epiviz.Rmd'}
 ```
 
 ---

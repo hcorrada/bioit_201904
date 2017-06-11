@@ -1,19 +1,17 @@
+
+---
+class: split-50
+
 ## Software
 
-<div class="columns-2">
-
-<div>
-<div class="centered">
-<img src="img/rbioc.png" style="height: 150px;"/>
-</div>
-
+.column[
+.image-50[![](img/rbioc.png)]
 - State-of-the-art computational and statistical analysis
 platform
 - We develop and apply methods for these analyses in this platform
 - Our collaborators do analysis in this platform with us
-</div>
-
-<div>
+]
+.column[
 - `metagenomeSeq`
 - `metagenomeFeatures`
 - `antiProfiles`
@@ -23,17 +21,24 @@ platform
 - `qsmooth`
 - `Rcplex`
 - `Rcsdp`
-</div>
-
-</div>
+]
 
 ---
 
-**Collaborative and exploratory analysis**
+### Collaborative and exploratory analysis
 
-> - *Data transformation and modeling*: data smoothing, region finding (R/Bioconductor: `Bsmooth`, `minfi`)
-> - *Exploration*: search by gene, search by overlap
-> - *Contextual analysis*: overlap with other data (our own, other labs, UCSC, ensembl)
+- *Data transformation and modeling*: data smoothing, region finding
+(R/Bioconductor: `Bsmooth`, `minfi`)
+
+--
+
+- *Exploration*: search by gene, search by overlap
+
+--
+
+- *Contextual analysis*: overlap with other data (our own, other labs, UCSC, ensembl)
+
+---
 
 ## Genomic Data Science  
 
@@ -48,9 +53,7 @@ platform
 
 ---
 
-<div class="centered">
-<img src="img/epiviz_logo_large_white.png" style="max-height: 40%; max-width: 40%"/>
-</div>
+.center[.image-40[![](img/epiviz_logo_large_white.png)]]
 
 
 ### Integrative, visual and computational exploratory analysis of genomic data
@@ -62,38 +65,47 @@ platform
 - Communication with R/Bioconductor: `epivizr` package
 
 e.g.: http://epiviz.cbcb.umd.edu/?ws=YOsu0RmUc9l
+
+<!--
 <footer class="source">[Nat. Methods, 2014]</footer>
+-->
 
 ---
 
 <iframe src="http://epiviz.cbcb.umd.edu/?ws=clHVLu0BQti" height="800"></iframe>
 
 ---
+class: middle
 
-**Creativity in exploration**
+## Creativity in exploration
 
 We are building software applications to support creative exploratory analysis of large genome-wide datasets...
 
-<div class="centered">
-<img src="img/terry.png" style="max-height: 60%; max-width: 60%"/>
-</div>
+.center[.image-60[![](img/terry)]]
 
+<!--
 <footer class="source">[T. Speed]</footer>
+-->
 
 ---
+class: middle
 
-**Summarization**: summarize integrated measurements (computed on data subsets)
+### Summarization
 
-<div class="centered">
+Summarize integrated measurements (computed on data subsets)
+
+.center[
 <video height="500" controls>
   <source src="movies/transform_aggregate.mp4" type="video/mp4">
 </video>
-</div>
+]
 
 
 ---
+class: middle
 
-**Statistically-guided exploration**: 
+### Statistically-guided exploration
+
 Calculate a statistic of interest
 
 ```r
@@ -118,16 +130,17 @@ mgr$slideshow(slideShowRegions)
 ```
 
 ---
+class: center, middle
 
-<div class="centered">
 <video height="550" controls>
   <source src="movies/guided_exploration_v2.mp4" type="video/mp4">
 </video>
-</div>
 
 ---
+class: middle
 
-**dynamically extensible**: 
+### Dynamically extensible
+
 Easily integrate new data types and add new visualizations.
 
 <div class="centered">
@@ -146,8 +159,9 @@ Easily integrate new data types and add new visualizations.
 </div>
 
 ---
+class: middle
 
-**Visualization design goals**
+### Visualization design goals
 
 - Context 
   - Integrate and align multiple data sources; navigate; search
@@ -155,11 +169,14 @@ Easily integrate new data types and add new visualizations.
   - *Encode*: map visualization properties to data on the fly
   - *Reconfigure*: multiple views of the same data
 
+<!--
 <footer class="source">[Perer & Shneiderman]</footer>
+-->
 
 ---
+class: middle
 
-**Visualization goals**
+### Visualization design goals
 
 - Data
   - *Select and filter*: tight-knit integration with R/Bioconductor; 
@@ -167,18 +184,23 @@ Easily integrate new data types and add new visualizations.
 - Model
   - New 'measurements' the result of modeling; perhaps suggested by data context
 
+<!--
 <footer class="source">[Perer & Shneiderman]</footer>
-
+-->
 
 ---
+class: middle
 
-<div class="centered">
+.center[
 <img src="img/hadley.png" style="max-height: 50%; max-width: 50%"/>
 <img src="img/hadley2.png" style="max-height: 30%; max-width: 30%"/>
-<footer class="source">[H. Wickham]</footer>
-</div>
+]
 
-One interpretation of *Big Data* is *Many relevant sources of contextual data*
+<!--
+<footer class="source">[H. Wickham]</footer>
+-->
+
+Specific challenge for epigenomic data analysis is how to integrate  *many relevant sources of contextual data*
 
 - Easily access/integrate *contextual* data
 - Driven by exploratory analysis of *immediate* data

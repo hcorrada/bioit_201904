@@ -1,183 +1,156 @@
-## What is epigenomics? 
-
-**What makes them different?**
-
-<div class="centered">
-<img src="img/jobsnadwoz.jpeg" style="height: 375px;"/>
-</div>
-
-Much human variation is due to difference in ~6 million DNA base pairs (0.1% of genome) 
-
-<div class="notes">
-- Phenotype, including disease susceptibility
-- One led a fairly strict diet and regimen, had pancreatic cancer, the other did not
-- While that gives a lot of information about the molecular basis of certain processes,
-it is not the full story. 
-</div>
 
 ---
 
-**What makes them different?**
 
+## What is epigenomics?
+
+.center[.large[What makes them different?]]
+
+.center[.image-90[![](img/epi1.png)]]
+
+<!---
 <div class="centered">
 <img src="img/epi1.png" style="max-height: 60%; max-width: 60%"/>
 </div>
+--->
 
 Genes are **expressed** differently during different **stages** and in different **tissues**.
 
-<div class="notes">
+???
+
 - Something that we want to understand is how that genetic variation leads to phenotypic variation.
 - A major part of understanding that, comes from understanding how regulation works.
-</div>
 
 ---
+class: split-50, middle
 
-<div class="centered">
-<img src="img/epi2.png" style="max-height: 60%; max-width: 60%"/>
-</div>
+## What is epigenomics?
 
-DNA is packed, making certain parts inaccessible, and this packing is **dynamic**.
+.column[
+DNA methylation is a chemical modification of DNA, involved in *gene expression* regulation.
+]
 
-<div class="notes">
-- DNA structure plays a major role
-</div>
+.column[
+.center[.image-30[![](img/epi4.png)]]
+]
 
----
-
+<!--
 <div class="centered">
 <img src="img/epi3.png" style="max-height: 60%; max-width: 60%"/>
 <img src="img/epi4.png" style="max-height: 60%; max-width: 60%"/>
 </div>
+-->
 
-DNA methylation is a chemical modification of DNA, involved in *gene expression* regulation.
 
+<!--
 <footer class="source">[Robertson and Wolffe, Nat Rev Genet, 2000]</footer>
+-->
 
-<div class="notes">
+???
+
 - DNA methylation plays a major role in this regulation process
 - Plus, we know how it is inherited from cell to cell, cell-fate
 - invovled in differentiation
 - can give us an important idea of this process in development and disease
 - plasticity
-</div>
-
-## Probing DNA methylation
-
-<div class="centered">
-<img src="img/meth_cartoon.png" style="height: 575px;"/>
-</div>
-
---- 
-
-<div class="centered">
-<img src="img/bisulfite_conversion.png" style="height: 75px;"/>
-</div>
-
---- 
-
-<div class="centered">
-<img src="img/bisulfite_conversion.png" style="height: 75px;"/>
-</div>
-
-<div class="centered">
-<img src="img/meth_pileup.png" style="height: 400px;"/>
-</div>
-
-## The data
-
-<div class="centered">
-<img src="img/data_table.png" style="height: 550px;"/>
-</div>
 
 ---
 
-<div class="centered">
-<img src="img/data_table2.png" style="height: 550px;"/>
-</div>
+## Probing DNA methylation
+
+.center[
+.image-100[![](img/meth_pileup.png)]
+]
 
 ---
-
-<div class="centered">
-<img src="img/data_table3.png" style="height: 550px;"/>
-</div>
+class: split-50
 
 ## Probing DNA methylation
 
-<div class="columns-2">
+.column[
+.center[.image-100[![](img/measure_meth.png)]]
+]
 
-<div class="centered">
-<img src="img/measure_meth.png" style="height: 450px;"/>
-</div>
-
+.column[
 - local-likelihood smoothing method
 - **high-frequency smoothing** estimates local methylation structure (small domains)
 - **low-frequency smoothing** estimates long-range methylation structure (large domains)
+]
 
+<!--
 <footer class="source">
   Nature Genetics, 2011\br
   Bioinformatics, 2013
 </footer>
+-->
 
-</div>
+---
 
 ## DNA methylation in cancer
 
-<div class="centered">
-<img src="img/block.png" style="max-height: 100%; max-width: 100%"/>
-</div>
+.center[.image-100[![](img/block.png)]]
 
 Large blocks of **hypo-methylation** in colon cancer
 
+<!--
 <footer class="source">Nat. Genetics, 2011</footer>
+-->
 
-<div class="notes">
-- long, 
+
 - consistent but partially methylated in normal tissues
 - while methylation levels are inconsistent in cancer, boundaries of these domains are conserved across tissues
-</div>
 - overlaps with other important genomic domains
 - genes within these blocks are **tissue-specific**
 
 ---
+class: middle
 
-<div class="centered">
-<img src="img/antiprofile.png" style="height: 400px;"/>
-</div>
-
-Genes with **hyper-variable** expression in colon cancer are enriched within these blocks.
-
-<footer class="source">Nat. Genetics, 2011</footer>
-
----
-
-<div class="centered">
-<img src="img/timp1.png" style="height: 400px;"/>
-</div>
+.center[.image-100[![](img/timp1.png)]]
 
 **Hypo-methylation** blocks observed across five solid tumor types.
 
+<!--
 <footer class="source">Genome Medicine, 2014</footer>
+-->
 
 ---
+class: middle
 
-<div class="centered">
-<img src="img/timp2.png" style="height: 400px;"/>
-</div>
+.center[.image-100[![](img/antiprofile.png)]]
+
+
+Genes with **hyper-variable** expression in colon cancer are enriched within these blocks.
+
+<!--
+<footer class="source">Nat. Genetics, 2011</footer>
+-->
+
+---
+class: middle
+
+.center[.image-100[![](img/timp2.png)]]
 
 Gene expression **hyper-variability** enriched in hypo-methylation blocks in other cancer types.
 
+<!--
 <footer class="source">Genome Medicine, 2014</footer>
+-->
 
 ---
+class: middle
 
 <div class="centered">
-<img src="img/barcode.png" style="max-height: 45%; max-width: 45%"/>
-<img src="img/barcode2.png" style="max-height: 45%; max-width: 45%"/>
+<img src="img/barcode.png" style="max-height: 60%; max-width: 60%"/>
+<img src="img/barcode2.png" style="max-height: 35%; max-width: 35%"/>
 </div>
 
 Genes with **consistent hyper-variable expression** across tumors are _tissue-specific_.
 
+<!--
 <footer class="source">BMC Bioinformatics, 2013</footer>
+-->
+
+---
 
 ## Summary
 
@@ -185,10 +158,3 @@ Genes with **consistent hyper-variable expression** across tumors are _tissue-sp
 - gene expression hyper-variability is enriched within these domains
 - hyper-variable genes within these regions are tissue-specific and involved in cellular fate
 
----
-
-<div class="centered">
-<img src="img/epi1.png" style="max-height: 60%; max-width: 60%"/>
-</div>
-
-Genes are **expressed** differently during different **stages** and in different **tissues**.

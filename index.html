@@ -12,10 +12,11 @@
     <textarea id="source">
 
 class: title-slide, center, middle
+count: false
 
 .banner[![](img/epiviz.png)]
 
-.title[Interactive, visual and statistical exploration of epigenomic data]
+.title[Interactive, visual and statistical exploratory analysis of epigenomic data]
 
 .author[Héctor Corrada Bravo]
 
@@ -25,6 +26,7 @@ University of Maryland, College Park, USA
 VIZBI '17: June 14, 2017
 ]
 
+.logo[![](img/logo.png)]
 
 ---
 class: split-50
@@ -38,12 +40,379 @@ Study the **molecular** basis of *variation* in development and disease
 Using **high-throughput** experimental methods  
 ]
 
+.column[.image-80[![](img/stickmen.png)]]
+
+
+
+---
+
+
+## What is epigenomics?
+
+.center[.large[What makes them different?]]
+
+.center[.image-90[![](img/epi1.png)]]
+
+&lt;!---
+&lt;div class="centered"&gt;
+&lt;img src="img/epi1.png" style="max-height: 60%; max-width: 60%"/&gt;
+&lt;/div&gt;
+---&gt;
+
+Genes are **expressed** differently during different **stages** and in different **tissues**.
+
+???
+
+- Something that we want to understand is how that genetic variation leads to phenotypic variation.
+- A major part of understanding that, comes from understanding how regulation works.
+
+---
+class: split-50, middle
+
+## What is epigenomics?
+
 .column[
-.right[.middle[.image-50[![](img/stickmen.png)]]]
+DNA methylation is a chemical modification of DNA, involved in *gene expression* regulation.
+]
+
+.column[
+.center[.image-30[![](img/epi4.png)]]
+]
+
+&lt;!--
+&lt;div class="centered"&gt;
+&lt;img src="img/epi3.png" style="max-height: 60%; max-width: 60%"/&gt;
+&lt;img src="img/epi4.png" style="max-height: 60%; max-width: 60%"/&gt;
+&lt;/div&gt;
+--&gt;
+
+
+&lt;!--
+&lt;footer class="source"&gt;[Robertson and Wolffe, Nat Rev Genet, 2000]&lt;/footer&gt;
+--&gt;
+
+???
+
+- DNA methylation plays a major role in this regulation process
+- Plus, we know how it is inherited from cell to cell, cell-fate
+- invovled in differentiation
+- can give us an important idea of this process in development and disease
+- plasticity
+
+---
+
+## Probing DNA methylation
+
+.center[
+.image-100[![](img/meth_pileup.png)]
+]
+
+---
+class: split-50
+
+## Probing DNA methylation
+
+.column[
+.center[.image-100[![](img/measure_meth.png)]]
+]
+
+.column[
+- local-likelihood smoothing method
+- **high-frequency smoothing** estimates local methylation structure (small domains)
+- **low-frequency smoothing** estimates long-range methylation structure (large domains)
+]
+
+&lt;!--
+&lt;footer class="source"&gt;
+  Nature Genetics, 2011\br
+  Bioinformatics, 2013
+&lt;/footer&gt;
+--&gt;
+
+---
+
+## DNA methylation in cancer
+
+.center[.image-100[![](img/block.png)]]
+
+Large blocks of **hypo-methylation** in colon cancer
+
+&lt;!--
+&lt;footer class="source"&gt;Nat. Genetics, 2011&lt;/footer&gt;
+--&gt;
+
+
+- consistent but partially methylated in normal tissues
+- while methylation levels are inconsistent in cancer, boundaries of these domains are conserved across tissues
+- overlaps with other important genomic domains
+- genes within these blocks are **tissue-specific**
+
+---
+class: middle
+
+.center[.image-100[![](img/timp1.png)]]
+
+**Hypo-methylation** blocks observed across five solid tumor types.
+
+&lt;!--
+&lt;footer class="source"&gt;Genome Medicine, 2014&lt;/footer&gt;
+--&gt;
+
+---
+class: middle
+
+.center[.image-100[![](img/antiprofile.png)]]
+
+
+Genes with **hyper-variable** expression in colon cancer are enriched within these blocks.
+
+&lt;!--
+&lt;footer class="source"&gt;Nat. Genetics, 2011&lt;/footer&gt;
+--&gt;
+
+---
+class: middle
+
+.center[.image-100[![](img/timp2.png)]]
+
+Gene expression **hyper-variability** enriched in hypo-methylation blocks in other cancer types.
+
+&lt;!--
+&lt;footer class="source"&gt;Genome Medicine, 2014&lt;/footer&gt;
+--&gt;
+
+---
+class: middle
+
+&lt;div class="centered"&gt;
+&lt;img src="img/barcode.png" style="max-height: 60%; max-width: 60%"/&gt;
+&lt;img src="img/barcode2.png" style="max-height: 35%; max-width: 35%"/&gt;
+&lt;/div&gt;
+
+Genes with **consistent hyper-variable expression** across tumors are _tissue-specific_.
+
+&lt;!--
+&lt;footer class="source"&gt;BMC Bioinformatics, 2013&lt;/footer&gt;
+--&gt;
+
+---
+
+## Summary
+
+- large domains of methylation loss are a stable mark across cancer types
+- gene expression hyper-variability is enriched within these domains
+- hyper-variable genes within these regions are tissue-specific and involved in cellular fate
+
+
+
+
+---
+class: split-50
+
+## Software
+
+.column[
+.image-50[![](img/rbioc.png)]
+- State-of-the-art computational and statistical analysis
+platform
+- We develop and apply methods for these analyses in this platform
+- Our collaborators do analysis in this platform with us
+]
+.column[
+- `metagenomeSeq`
+- `metagenomeFeatures`
+- `antiProfiles`
+- `minfi`
+- `bumphunter`
+- `HTShape`
+- `qsmooth`
+- `Rcplex`
+- `Rcsdp`
+]
+
+---
+
+### Collaborative and exploratory analysis
+
+- *Data transformation and modeling*: data smoothing, region finding
+(R/Bioconductor: `Bsmooth`, `minfi`)
+
+--
+
+- *Exploration*: search by gene, search by overlap
+
+--
+
+- *Contextual analysis*: overlap with other data (our own, other labs, UCSC, ensembl)
+
+---
+
+## Genomic Data Science  
+
+- We have unprecedented ability to measure
+- and lots of publicly available data to contextualize it
+
+&lt;div class="centered"&gt;
+&lt;img src="img/hadley.png" style="max-height: 50%; max-width: 50%"/&gt;
+&lt;img src="img/hadley2.png" style="max-height: 30%; max-width: 30%"/&gt;
+&lt;footer class="source"&gt;[H. Wickham]&lt;/footer&gt;
+&lt;/div&gt;
+
+---
+
+.center[.image-40[![](img/epiviz_logo_large_white.png)]]
+
+
+### Integrative, visual and computational exploratory analysis of genomic data
+
+- Browser-based
+- Interactive
+- Integration of data
+- Reproducible dissemination
+- Communication with R/Bioconductor: `epivizr` package
+
+e.g.: http://epiviz.cbcb.umd.edu/?ws=YOsu0RmUc9l
+
+&lt;!--
+&lt;footer class="source"&gt;[Nat. Methods, 2014]&lt;/footer&gt;
+--&gt;
+
+---
+
+&lt;iframe src="http://epiviz.cbcb.umd.edu/?ws=clHVLu0BQti" height="800"&gt;&lt;/iframe&gt;
+
+---
+class: middle
+
+## Creativity in exploration
+
+We are building software applications to support creative exploratory analysis of large genome-wide datasets...
+
+.center[.image-60[![](img/terry)]]
+
+&lt;!--
+&lt;footer class="source"&gt;[T. Speed]&lt;/footer&gt;
+--&gt;
+
+---
+class: middle
+
+### Summarization
+
+Summarize integrated measurements (computed on data subsets)
+
+.center[
+&lt;video height="500" controls&gt;
+  &lt;source src="movies/transform_aggregate.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
 ]
 
 
+---
+class: middle
 
+### Statistically-guided exploration
+
+Calculate a statistic of interest
+
+```r
+# Get tumor methylation base-pair data
+m &lt;- assay(se)[,"tumor"]
+
+# Compute regions with highest variability across cpgs
+region_stat &lt;- calcWindowStat(m, step=25, window=80, stat=rowSds)
+s &lt;- region_stat[,"stat"]
+```
+
+Explore data based on statistic
+
+_What's around the regions with highest across CpG variability?_
+
+```r
+# get locations in decreasing order
+o &lt;- order(s, decreasing=TRUE)
+indices &lt;- region_stat[o, "indices"]
+slideShowRegions &lt;- rowRanges(se)[indices] + 1250000L
+mgr$slideshow(slideShowRegions)
+```
+
+---
+class: center, middle
+
+&lt;video height="550" controls&gt;
+  &lt;source src="movies/guided_exploration_v2.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+
+---
+class: middle
+
+### Dynamically extensible
+
+Easily integrate new data types and add new visualizations.
+
+&lt;div class="centered"&gt;
+&lt;img src="img/datatypes.png" style="max-width=50%; min-width=50%"/&gt;
+&lt;/div&gt;
+
+- Based on classic "three-table" design in genomic data analysis
+- **Data providers define coordinate space**
+
+---
+
+&lt;div class="centered"&gt;
+&lt;video height="550" controls&gt;
+  &lt;source src="movies/finance.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+&lt;/div&gt;
+
+---
+class: middle
+
+### Visualization design goals
+
+- Context 
+  - Integrate and align multiple data sources; navigate; search
+  - *Connect*: brushing
+  - *Encode*: map visualization properties to data on the fly
+  - *Reconfigure*: multiple views of the same data
+
+&lt;!--
+&lt;footer class="source"&gt;[Perer &amp; Shneiderman]&lt;/footer&gt;
+--&gt;
+
+---
+class: middle
+
+### Visualization design goals
+
+- Data
+  - *Select and filter*: tight-knit integration with R/Bioconductor; 
+  - (current work) filters on visualization propagate to data environment
+- Model
+  - New 'measurements' the result of modeling; perhaps suggested by data context
+
+&lt;!--
+&lt;footer class="source"&gt;[Perer &amp; Shneiderman]&lt;/footer&gt;
+--&gt;
+
+---
+class: middle
+
+.center[
+&lt;img src="img/hadley.png" style="max-height: 50%; max-width: 50%"/&gt;
+&lt;img src="img/hadley2.png" style="max-height: 30%; max-width: 30%"/&gt;
+]
+
+&lt;!--
+&lt;footer class="source"&gt;[H. Wickham]&lt;/footer&gt;
+--&gt;
+
+Specific challenge for epigenomic data analysis is how to integrate  *many relevant sources of contextual data*
+
+- Easily access/integrate *contextual* data
+- Driven by exploratory analysis of *immediate* data
+- Iterative process
+- Visual and computational exploration go hand in hand
 
 
 ---
