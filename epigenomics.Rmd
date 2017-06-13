@@ -8,11 +8,6 @@
 
 .center[.image-60[![](img/epi1.png)]]
 
-<!---
-<div class="centered">
-<img src="img/epi1.png" style="max-height: 60%; max-width: 60%"/>
-</div>
---->
 
 Genes are **expressed** differently during different **stages** and in different **tissues**.
 
@@ -34,17 +29,7 @@ DNA methylation is a chemical modification of DNA, involved in *gene expression*
 .center[.image-30[![](img/epi4.png)]]
 ]
 
-<!--
-<div class="centered">
-<img src="img/epi3.png" style="max-height: 60%; max-width: 60%"/>
-<img src="img/epi4.png" style="max-height: 60%; max-width: 60%"/>
-</div>
--->
-
-
-<!--
-<footer class="source">[Robertson and Wolffe, Nat Rev Genet, 2000]</footer>
--->
+.source[[Robertson and Wolffe, Nat Rev Genet, 2000]]
 
 ???
 
@@ -77,12 +62,9 @@ class: split-50, middle
 - **low-frequency smoothing** estimates long-range methylation structure (large domains)
 ]
 
-<!--
-<footer class="source">
-  Nature Genetics, 2011\br
-  Bioinformatics, 2013
-</footer>
--->
+.source[[Nature Genetics, 2011]\br
+[Bioinformatics, 2013]
+]
 
 ---
 
@@ -92,15 +74,12 @@ class: split-50, middle
 
 Large blocks of **hypo-methylation** in colon cancer
 
-<!--
-<footer class="source">Nat. Genetics, 2011</footer>
--->
-
-
-- consistent but partially methylated in normal tissues
-- levels are inconsistent in cancer, but boundaries are conserved across samples
+- consistent partially methylated in normal tissues
+- cancer levels are inconsistent, boundaries conserved across samples
 - overlaps with other important genomic domains
 - genes within these blocks are **tissue-specific**
+
+.source[[Nat. Genetics, 2011]]
 
 ---
 class: middle
@@ -110,9 +89,7 @@ exclude: true
 
 **Hypo-methylation** blocks observed across five solid tumor types.
 
-<!--
-<footer class="source">Genome Medicine, 2014</footer>
--->
+.source[[Genome Medicine, 2014]]
 
 ---
 class: middle
@@ -122,9 +99,7 @@ class: middle
 
 Genes with **hyper-variable** expression in colon cancer are enriched within these blocks.
 
-<!--
-<footer class="source">Nat. Genetics, 2011</footer>
--->
+.source[[Nat. Genetics, 2011]]
 
 ---
 class: middle
@@ -134,9 +109,7 @@ exclude: true
 
 Gene expression **hyper-variability** enriched in hypo-methylation blocks in other cancer types.
 
-<!--
-<footer class="source">Genome Medicine, 2014</footer>
--->
+.source[[Genome Medicine, 2014]]
 
 ---
 class: middle
@@ -149,9 +122,7 @@ exclude: true
 
 Genes with **consistent hyper-variable expression** across tumors are _tissue-specific_.
 
-<!--
-<footer class="source">BMC Bioinformatics, 2013</footer>
--->
+.source[[BMC Bioinformatics, 2013]]
 
 ---
 

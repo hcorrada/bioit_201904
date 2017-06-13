@@ -2,30 +2,37 @@
 ---
 class: split-50
 
-## Software
+## Software for statistical analysis
 
 .column[
-.image-50[![](img/rbioc.png)]
-- State-of-the-art computational and statistical analysis
-platform
-- We develop and apply methods for these analyses in this platform
-- Our collaborators do analysis in this platform with us
+State-of-the-art computational and statistical analysis
+platform  
+
+We develop and apply methods for these analyses in this platform  
+
+Our collaborators do analysis in this platform with us
+
+.image-30[![](img/rbioc.png)]
+
 ]
+
 .column[
-- `metagenomeSeq`
-- `metagenomeFeatures`
-- `antiProfiles`
-- `minfi`
-- `bumphunter`
-- `HTShape`
-- `qsmooth`
-- `Rcplex`
-- `Rcsdp`
+.center[
+`minfi`  
+`bumphunter`  
+`antiProfiles`  
+`HTShape`  
+`qsmooth`  
+`metagenomeSeq`  
+`metagenomeFeatures`  
+`Rcplex`  
+`Rcsdp`
+]
 ]
 
 ---
 
-### Collaborative and exploratory analysis
+### Exploratory and collaborative analysis
 
 - *Data transformation and modeling*: data smoothing, region finding
 (R/Bioconductor: `Bsmooth`, `minfi`)
@@ -45,11 +52,12 @@ platform
 - We have unprecedented ability to measure
 - and lots of publicly available data to contextualize it
 
-<div class="centered">
+.center[
 <img src="img/hadley.png" style="max-height: 50%; max-width: 50%"/>
 <img src="img/hadley2.png" style="max-height: 30%; max-width: 30%"/>
-<footer class="source">[H. Wickham]</footer>
-</div>
+]
+
+.source[[H. Wickham]]
 
 ---
 
@@ -66,14 +74,13 @@ platform
 
 e.g.: http://epiviz.cbcb.umd.edu/?ws=YOsu0RmUc9l
 
-<!--
-<footer class="source">[Nat. Methods, 2014]</footer>
--->
+.source[[Nat. Methods, 2014]]
 
 ---
 exclude: true
+class: center, middle
 
-<iframe src="http://epiviz.cbcb.umd.edu/?ws=clHVLu0BQti" height="800"></iframe>
+<iframe src="http://epiviz.cbcb.umd.edu/?ws=clHVLu0BQti" height="100%" width="100%" frameborder="0"></iframe>
 
 ---
 class: middle
@@ -82,53 +89,54 @@ class: middle
 
 We are building software applications to support creative exploratory analysis of large genome-wide datasets...
 
-.center[.image-60[![](img/terry)]]
+.center[.image-60[![](img/terry.png)]]
 
-<!--
-<footer class="source">[T. Speed]</footer>
--->
+.source[[T. Speed]]
 
 ---
-class: middle
+class: middle, split-30
 
 ### Summarization
 
+.column[
 Summarize integrated measurements (computed on data subsets)
+]
 
+.column[
 .center[
-<video height="500" controls>
+<video height="450px" controls>
   <source src="movies/transform_aggregate.mp4" type="video/mp4">
 </video>
 ]
-
+]
 
 ---
-class: middle
+class: middle, split-40
 
 ### Statistically-guided exploration
 
-Calculate a statistic of interest
+.column[
+Calculate a statistic of interest  
+Interactively explore data based on statistic
+]
 
-```r
+.column[
+```{r, tidy=FALSE, eval=FALSE}
 # Get tumor methylation base-pair data
 m <- assay(se)[,"tumor"]
 
 # Compute regions with highest variability across cpgs
-region_stat <- calcWindowStat(m, step=25, window=80, stat=rowSds)
+region_stat <- calcWindowStat(m, step=25, 
+                              window=80, stat=rowSds)
 s <- region_stat[,"stat"]
-```
 
-Explore data based on statistic
-
-_What's around the regions with highest across CpG variability?_
-
-```r
 # get locations in decreasing order
 o <- order(s, decreasing=TRUE)
 indices <- region_stat[o, "indices"]
 slideShowRegions <- rowRanges(se)[indices] + 1250000L
 mgr$slideshow(slideShowRegions)
 ```
+]
 
 ---
 class: center, middle
@@ -138,21 +146,26 @@ class: center, middle
 </video>
 
 ---
-class: middle
+class: middle, split-60
+exclude: true
 
 ### Dynamically extensible
 
-Easily integrate new data types and add new visualizations.
-
-<div class="centered">
-<img src="img/datatypes.png" style="max-width=50%; min-width=50%"/>
-</div>
+.column[
+Integrate new data types and add new visualizations.
 
 - Based on classic "three-table" design in genomic data analysis
 - **Data providers define coordinate space**
+]
+
+.column[
+.center[
+<img src="img/datatypes.png" style="max-width=50%; min-width=50%"/>
+]
+]
 
 ---
-
+exclude: true
 <div class="centered">
 <video height="550" controls>
   <source src="movies/finance.mp4" type="video/mp4">
@@ -170,9 +183,7 @@ class: middle
   - *Encode*: map visualization properties to data on the fly
   - *Reconfigure*: multiple views of the same data
 
-<!--
-<footer class="source">[Perer & Shneiderman]</footer>
--->
+.source[[Perer & Shneiderman]]
 
 ---
 class: middle
@@ -185,9 +196,7 @@ class: middle
 - Model
   - New 'measurements' the result of modeling; perhaps suggested by data context
 
-<!--
-<footer class="source">[Perer & Shneiderman]</footer>
--->
+.source[[Perer & Shneiderman]]
 
 ---
 class: middle
@@ -197,9 +206,7 @@ class: middle
 <img src="img/hadley2.png" style="max-height: 30%; max-width: 30%"/>
 ]
 
-<!--
-<footer class="source">[H. Wickham]</footer>
--->
+.source[[H. Wickham]]
 
 Specific challenge for epigenomic data analysis is how to integrate  *many relevant sources of contextual data*
 

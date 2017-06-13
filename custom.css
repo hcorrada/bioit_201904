@@ -51,10 +51,12 @@ h1, h2, h3 {
 .column:first-of-type {float:left;}
 .column:last-of-type {float:right;}
 
+.split-30 .column:first-of-type {width: 30%;}
+.split-30 .column:last-of-type {width: 70%;}
 .split-40 .column:first-of-type {width: 40%;}
 .split-40 .column:last-of-type {width: 60%;}
 .split-50 .column:first-of-type {width: 50%;}
-.split-50 .column:last-of-type {width: 50%;}
+.split-50 .column:last-of-type {width: 50%}
 .split-60 .column:first-of-type {width: 60%;}
 .split-60 .column:last-of-type {width: 40%;}
 
@@ -70,3 +72,10 @@ h1, h2, h3 {
 .image-100 img {width: 100%;}
 
 body .large {font-size: 140%;}
+
+.remark-slide-content .source {
+  float: right;
+  font-size: 70%;
+  font-style: italic;
+  color: red;
+}

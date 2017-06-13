@@ -14,6 +14,7 @@ output:
     nature:
       ratio: "16:9"
 ---
+
 class: title-slide, center, middle
 count: false
 
@@ -45,13 +46,13 @@ Using **high-throughput** experimental methods
 
 .column[.image-80[![](img/stickmen.png)]]
 
-```{r child='epigenomics.Rmd'}
+```{r child='epigenomics.Rmd', eval=FALSE}
 ```
 
 ```{r child='epiviz.Rmd', eval=FALSE}
 ```
 
-```{r child='reflection.Rmd', eval=FALSE}
+```{r child='reflection.Rmd', eval=TRUE}
 ```
 
 ---
