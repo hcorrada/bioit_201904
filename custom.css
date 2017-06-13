@@ -79,3 +79,7 @@ body .large {font-size: 140%;}
   font-style: italic;
   color: red;
 }
+
+.survey_table tr {
+  font-size: 120%;
+}

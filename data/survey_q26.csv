@@ -1,0 +1,96 @@
+rowid,item,value
+4,first,Time consuming
+5,first,Time consuming
+6,first,Time consuming
+7,first,Other
+8,first,Time consuming
+9,first,Time consuming
+10,first,Time consuming
+11,first,Time consuming
+12,first,Data size is an issue for interactive plots
+13,first,Time consuming
+14,first,Data size is an issue for interactive plots
+17,first,Time consuming
+18,first,Lack of reproducibility
+19,first,Time consuming
+20,first,Libraries/packages not customizable
+22,first,Other
+23,first,Time consuming
+24,first,Data size is an issue for interactive plots
+26,first,Time consuming
+27,first,Time consuming
+28,first,Time consuming
+29,first,Time consuming
+30,first,Time consuming
+31,first,Time consuming
+32,first,Time consuming
+35,first,Time consuming
+38,first,Time consuming
+39,first,Time consuming
+40,first,Libraries/packages not available
+46,first,Time consuming
+47,first,Other
+49,first,Time consuming
+50,first,Time consuming
+51,first,Time consuming
+52,first,Time consuming
+53,first,Time consuming
+54,first,Time consuming
+55,first,Libraries/packages not customizable
+56,first,Data size is an issue for interactive plots
+57,first,Time consuming
+59,first,Libraries/packages not available
+61,first,Time consuming
+62,first,Time consuming
+63,first,Time consuming
+65,first,Other
+66,first,Time consuming
+67,first,Time consuming
+4,second,Libraries/packages not available
+5,second,Data size is an issue for interactive plots
+6,second,Data size is an issue for interactive plots
+8,second,Lack of reproducibility
+9,second,Libraries/packages not customizable
+10,second,Data size is an issue for interactive plots
+11,second,Libraries/packages not customizable
+12,second,Lack of reproducibility
+13,second,Libraries/packages not customizable
+14,second,Other
+18,second,Other
+19,second,Lack of reproducibility
+20,second,Lack of reproducibility
+26,second,Data size is an issue for interactive plots
+27,second,Data size is an issue for interactive plots
+28,second,Libraries/packages not customizable
+29,second,Libraries/packages not customizable
+31,second,Lack of reproducibility
+35,second,Data size is an issue for interactive plots
+38,second,Data size is an issue for interactive plots
+39,second,Data size is an issue for interactive plots
+49,second,Libraries/packages not available
+51,second,Libraries/packages not customizable
+52,second,Data size is an issue for interactive plots
+53,second,Libraries/packages not available
+54,second,Libraries/packages not available
+56,second,Lack of reproducibility
+59,second,Libraries/packages not customizable
+62,second,Data size is an issue for interactive plots
+63,second,Libraries/packages not customizable
+66,second,Data size is an issue for interactive plots
+4,third,Libraries/packages not customizable
+9,third,Other
+11,third,Data size is an issue for interactive plots
+13,third,Lack of reproducibility
+19,third,Other
+20,third,Other
+28,third,Data size is an issue for interactive plots
+35,third,Lack of reproducibility
+49,third,Data size is an issue for interactive plots
+53,third,Data size is an issue for interactive plots
+54,third,Libraries/packages not customizable
+62,third,Lack of reproducibility
+63,third,Data size is an issue for interactive plots
+4,fourth,Data size is an issue for interactive plots
+49,fourth,Lack of reproducibility
+63,fourth,Lack of reproducibility
+4,fifth,Lack of reproducibility

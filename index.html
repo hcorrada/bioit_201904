@@ -85,7 +85,83 @@ About half has used interactive visualization previously
 Predominantly through shiny: https://shiny.rstudio.com
 
 
+---
 
+### Issues faced creating interactive visualizations
+
+
+
+
+
+&lt;img src="index_files/figure-html/plot_q26-1.png" width="1056" /&gt;
+
+---
+
+### Would like to see in genomic interactive visualization platform
+
+
+
+&lt;table class=survey_table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; response &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; num. respondents &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; The interactive visualization tool should be a very flexible and extendable system that I can use to develop and create customized workflows. &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 26 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; I would use the interactive tool as a standalone application that would quickly let me load, visualize and analyze data. As an end user, I am mostly interested in the usability of the application. &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 14 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; I don't know &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+## Takeaways
+
+- Authoring, extensibility, infrastructure
+- Collaboration within teams
+- Interactive publishing and deposition
+
+---
+class: split-50
+
+## Epiviz components (in development)
+
+Drop in epiviz visualization components
+
+.column[
+- Connected to either webserver or local R environment
+- Can be embedded into HTML
+- Reusable components
+]
+
+.column[
+```html
+&lt;head&gt;
+&lt;link rel="import" href="epiviz-charts"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+...
+&lt;epiviz-navigation chr="chr6" ...&gt;
+  &lt;epiviz-genes-track ...&gt;
+  &lt;epiviz-scatter-plot x="cancer" y="normal"&gt;
+&lt;/epiviz-navigation
+&lt;/body&gt;
+```
+]
+
+.footer[http://github.com/epiviz/epiviz-chart]
 
 ---
 

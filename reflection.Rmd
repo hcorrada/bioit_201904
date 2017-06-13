@@ -37,4 +37,92 @@ Predominantly through shiny: https://shiny.rstudio.com
 
 ---
 
+### Issues faced creating interactive visualizations
 
+```{r echo=FALSE}
+library(tidyverse)
+library(forcats)
+
+theme_set(theme_minimal() + 
+            theme(panel.grid.major = element_blank(),
+                  panel.grid.minor = element_blank(),
+                  panel.border = element_blank()))
+```
+
+```{r load_q26, echo=FALSE, cache=TRUE, message=FALSE}
+q26_data <- read_csv("data/survey_q26.csv")
+```
+
+```{r plot_q26, echo=FALSE, fig.width=11}
+q26_data %>% 
+  count(value) %>%
+  mutate(value=as_factor(value)) %>%
+  mutate(value=reorder(value, n)) %>%
+  ggplot() +
+  aes(x=value, y=n) +
+  geom_bar(stat="identity") +
+  coord_flip() +
+  labs(x="", y="number of responses") +
+  theme(axis.text.y=element_text(size=20),
+        axis.title.x=element_text(size=18),
+        axis.text.x=element_text(size=14))
+```
+
+---
+
+### Would like to see in genomic interactive visualization platform
+
+```{r load_q23, echo=FALSE, message=FALSE, cache=TRUE}
+q23_data <- read_csv("data/survey_q23.csv")
+```
+
+```{r q23_tab, echo=FALSE}
+q23_data %>%
+  count(Q23) %>%
+  rename(value=Q23) %>%
+  mutate(value=factor(value)) %>%
+  mutate(value=reorder(value, n)) %>%
+  arrange(desc(value)) %>%
+  select(value, n) %>%
+  knitr::kable('html', col.names=c("response", "num. respondents"),
+               table.attr="class=survey_table")
+```
+
+---
+
+## Takeaways
+
+- Authoring, extensibility, infrastructure
+- Collaboration within teams
+- Interactive publishing and deposition
+
+---
+class: split-50
+
+## Epiviz components (in development)
+
+Drop in epiviz visualization components
+
+.column[
+- Connected to either webserver or local R environment
+- Can be embedded into HTML
+- Reusable components
+]
+
+.column[
+```html
+<head>
+<link rel="import" href="epiviz-charts">
+</head>
+
+<body>
+...
+<epiviz-navigation chr="chr6" ...>
+  <epiviz-genes-track ...>
+  <epiviz-scatter-plot x="cancer" y="normal">
+</epiviz-navigation
+</body>
+```
+]
+
+.footer[http://github.com/epiviz/epiviz-chart]
