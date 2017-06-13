@@ -11,6 +11,8 @@ output:
     seal: false
     includes:
       afer_body: custom.html
+    nature:
+      ratio: "16:9"
 ---
 class: title-slide, center, middle
 count: false
@@ -46,7 +48,10 @@ Using **high-throughput** experimental methods
 ```{r child='epigenomics.Rmd'}
 ```
 
-```{r child='epiviz.Rmd'}
+```{r child='epiviz.Rmd', eval=FALSE}
+```
+
+```{r child='reflection.Rmd', eval=FALSE}
 ```
 
 ---

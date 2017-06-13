@@ -51,7 +51,7 @@ Using **high-throughput** experimental methods
 
 .center[.large[What makes them different?]]
 
-.center[.image-90[![](img/epi1.png)]]
+.center[.image-60[![](img/epi1.png)]]
 
 &lt;!---
 &lt;div class="centered"&gt;
@@ -108,12 +108,12 @@ DNA methylation is a chemical modification of DNA, involved in *gene expression*
 ]
 
 ---
-class: split-50
+class: split-50, middle
 
 ## Probing DNA methylation
 
 .column[
-.center[.image-100[![](img/measure_meth.png)]]
+.image-90[![](img/measure_meth.png)]
 ]
 
 .column[
@@ -143,12 +143,13 @@ Large blocks of **hypo-methylation** in colon cancer
 
 
 - consistent but partially methylated in normal tissues
-- while methylation levels are inconsistent in cancer, boundaries of these domains are conserved across tissues
+- levels are inconsistent in cancer, but boundaries are conserved across samples
 - overlaps with other important genomic domains
 - genes within these blocks are **tissue-specific**
 
 ---
 class: middle
+exclude: true
 
 .center[.image-100[![](img/timp1.png)]]
 
@@ -161,7 +162,7 @@ class: middle
 ---
 class: middle
 
-.center[.image-100[![](img/antiprofile.png)]]
+.center[.image-80[![](img/antiprofile.png)]]
 
 
 Genes with **hyper-variable** expression in colon cancer are enriched within these blocks.
@@ -172,6 +173,7 @@ Genes with **hyper-variable** expression in colon cancer are enriched within the
 
 ---
 class: middle
+exclude: true
 
 .center[.image-100[![](img/timp2.png)]]
 
@@ -183,6 +185,7 @@ Gene expression **hyper-variability** enriched in hypo-methylation blocks in oth
 
 ---
 class: middle
+exclude: true
 
 &lt;div class="centered"&gt;
 &lt;img src="img/barcode.png" style="max-height: 60%; max-width: 60%"/&gt;
@@ -206,213 +209,6 @@ Genes with **consistent hyper-variable expression** across tumors are _tissue-sp
 
 
 
----
-class: split-50
-
-## Software
-
-.column[
-.image-50[![](img/rbioc.png)]
-- State-of-the-art computational and statistical analysis
-platform
-- We develop and apply methods for these analyses in this platform
-- Our collaborators do analysis in this platform with us
-]
-.column[
-- `metagenomeSeq`
-- `metagenomeFeatures`
-- `antiProfiles`
-- `minfi`
-- `bumphunter`
-- `HTShape`
-- `qsmooth`
-- `Rcplex`
-- `Rcsdp`
-]
-
----
-
-### Collaborative and exploratory analysis
-
-- *Data transformation and modeling*: data smoothing, region finding
-(R/Bioconductor: `Bsmooth`, `minfi`)
-
---
-
-- *Exploration*: search by gene, search by overlap
-
---
-
-- *Contextual analysis*: overlap with other data (our own, other labs, UCSC, ensembl)
-
----
-
-## Genomic Data Science  
-
-- We have unprecedented ability to measure
-- and lots of publicly available data to contextualize it
-
-&lt;div class="centered"&gt;
-&lt;img src="img/hadley.png" style="max-height: 50%; max-width: 50%"/&gt;
-&lt;img src="img/hadley2.png" style="max-height: 30%; max-width: 30%"/&gt;
-&lt;footer class="source"&gt;[H. Wickham]&lt;/footer&gt;
-&lt;/div&gt;
-
----
-
-.center[.image-40[![](img/epiviz_logo_large_white.png)]]
-
-
-### Integrative, visual and computational exploratory analysis of genomic data
-
-- Browser-based
-- Interactive
-- Integration of data
-- Reproducible dissemination
-- Communication with R/Bioconductor: `epivizr` package
-
-e.g.: http://epiviz.cbcb.umd.edu/?ws=YOsu0RmUc9l
-
-&lt;!--
-&lt;footer class="source"&gt;[Nat. Methods, 2014]&lt;/footer&gt;
---&gt;
-
----
-
-&lt;iframe src="http://epiviz.cbcb.umd.edu/?ws=clHVLu0BQti" height="800"&gt;&lt;/iframe&gt;
-
----
-class: middle
-
-## Creativity in exploration
-
-We are building software applications to support creative exploratory analysis of large genome-wide datasets...
-
-.center[.image-60[![](img/terry)]]
-
-&lt;!--
-&lt;footer class="source"&gt;[T. Speed]&lt;/footer&gt;
---&gt;
-
----
-class: middle
-
-### Summarization
-
-Summarize integrated measurements (computed on data subsets)
-
-.center[
-&lt;video height="500" controls&gt;
-  &lt;source src="movies/transform_aggregate.mp4" type="video/mp4"&gt;
-&lt;/video&gt;
-]
-
-
----
-class: middle
-
-### Statistically-guided exploration
-
-Calculate a statistic of interest
-
-```r
-# Get tumor methylation base-pair data
-m &lt;- assay(se)[,"tumor"]
-
-# Compute regions with highest variability across cpgs
-region_stat &lt;- calcWindowStat(m, step=25, window=80, stat=rowSds)
-s &lt;- region_stat[,"stat"]
-```
-
-Explore data based on statistic
-
-_What's around the regions with highest across CpG variability?_
-
-```r
-# get locations in decreasing order
-o &lt;- order(s, decreasing=TRUE)
-indices &lt;- region_stat[o, "indices"]
-slideShowRegions &lt;- rowRanges(se)[indices] + 1250000L
-mgr$slideshow(slideShowRegions)
-```
-
----
-class: center, middle
-
-&lt;video height="550" controls&gt;
-  &lt;source src="movies/guided_exploration_v2.mp4" type="video/mp4"&gt;
-&lt;/video&gt;
-
----
-class: middle
-
-### Dynamically extensible
-
-Easily integrate new data types and add new visualizations.
-
-&lt;div class="centered"&gt;
-&lt;img src="img/datatypes.png" style="max-width=50%; min-width=50%"/&gt;
-&lt;/div&gt;
-
-- Based on classic "three-table" design in genomic data analysis
-- **Data providers define coordinate space**
-
----
-
-&lt;div class="centered"&gt;
-&lt;video height="550" controls&gt;
-  &lt;source src="movies/finance.mp4" type="video/mp4"&gt;
-&lt;/video&gt;
-&lt;/div&gt;
-
----
-class: middle
-
-### Visualization design goals
-
-- Context 
-  - Integrate and align multiple data sources; navigate; search
-  - *Connect*: brushing
-  - *Encode*: map visualization properties to data on the fly
-  - *Reconfigure*: multiple views of the same data
-
-&lt;!--
-&lt;footer class="source"&gt;[Perer &amp; Shneiderman]&lt;/footer&gt;
---&gt;
-
----
-class: middle
-
-### Visualization design goals
-
-- Data
-  - *Select and filter*: tight-knit integration with R/Bioconductor; 
-  - (current work) filters on visualization propagate to data environment
-- Model
-  - New 'measurements' the result of modeling; perhaps suggested by data context
-
-&lt;!--
-&lt;footer class="source"&gt;[Perer &amp; Shneiderman]&lt;/footer&gt;
---&gt;
-
----
-class: middle
-
-.center[
-&lt;img src="img/hadley.png" style="max-height: 50%; max-width: 50%"/&gt;
-&lt;img src="img/hadley2.png" style="max-height: 30%; max-width: 30%"/&gt;
-]
-
-&lt;!--
-&lt;footer class="source"&gt;[H. Wickham]&lt;/footer&gt;
---&gt;
-
-Specific challenge for epigenomic data analysis is how to integrate  *many relevant sources of contextual data*
-
-- Easily access/integrate *contextual* data
-- Driven by exploratory analysis of *immediate* data
-- Iterative process
-- Visual and computational exploration go hand in hand
 
 
 ---
@@ -431,7 +227,9 @@ Funding: NIH, Genentech, Gates Foundation
 [\@hcorrada](https://twitter.com/hcorrada)
     </textarea>
 <script src="libs/remark-latest.min.js"></script>
-<script>var slideshow = remark.create();
+<script>var slideshow = remark.create({
+"ratio": "16:9"
+});
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {window.dispatchEvent(new Event('resize'));});</script>
 
 <script type="text/x-mathjax-config">

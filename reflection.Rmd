@@ -1,0 +1,16 @@
+
+---
+
+## Lessons Learned
+
+- R/Bioconductor connection is a real success
+  - now UI is fully scriptable, interactive viz weaved with 
+  statistical analysis
+  
+  - Integrate interactive visualization as part of literate
+  programming with Rmarkdown
+  
+  - Bioconductor community is a great resource
+  
+## Survey Results
+

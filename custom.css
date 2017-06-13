@@ -4,6 +4,11 @@ body {
   font-family: 'Arimo', sans-serif;
 }
 
+body .remark-slide-content {
+  font-size: 25px;
+  line-height: 1.5em; 
+}
+
 h1, h2, h3 {
   font-family: 'Arimo';
   font-weight: normal;
@@ -15,7 +20,10 @@ h1, h2, h3 {
   font-weight: regular;
 }
 
-.title-slide .banner img {opacity: 0.2;}
+.title-slide .banner img {
+  opacity: 0.2;
+  max-width: 80%;
+}
 
 .title-slide .author {
   font-size: 130%;
@@ -32,12 +40,12 @@ h1, h2, h3 {
 .title-slide .logo {
   position: relative;
   bottom: 0px;
-  left: 300px;
+  left: 450px;
   height: 20px;
 }
 
 .title-slide .logo img {
-  width: 25%;
+  max-width: 20%;
 }
 
 .column:first-of-type {float:left;}

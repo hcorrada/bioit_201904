@@ -6,7 +6,7 @@
 
 .center[.large[What makes them different?]]
 
-.center[.image-90[![](img/epi1.png)]]
+.center[.image-60[![](img/epi1.png)]]
 
 <!---
 <div class="centered">
@@ -63,12 +63,12 @@ DNA methylation is a chemical modification of DNA, involved in *gene expression*
 ]
 
 ---
-class: split-50
+class: split-50, middle
 
 ## Probing DNA methylation
 
 .column[
-.center[.image-100[![](img/measure_meth.png)]]
+.image-90[![](img/measure_meth.png)]
 ]
 
 .column[
@@ -98,12 +98,13 @@ Large blocks of **hypo-methylation** in colon cancer
 
 
 - consistent but partially methylated in normal tissues
-- while methylation levels are inconsistent in cancer, boundaries of these domains are conserved across tissues
+- levels are inconsistent in cancer, but boundaries are conserved across samples
 - overlaps with other important genomic domains
 - genes within these blocks are **tissue-specific**
 
 ---
 class: middle
+exclude: true
 
 .center[.image-100[![](img/timp1.png)]]
 
@@ -116,7 +117,7 @@ class: middle
 ---
 class: middle
 
-.center[.image-100[![](img/antiprofile.png)]]
+.center[.image-80[![](img/antiprofile.png)]]
 
 
 Genes with **hyper-variable** expression in colon cancer are enriched within these blocks.
@@ -127,6 +128,7 @@ Genes with **hyper-variable** expression in colon cancer are enriched within the
 
 ---
 class: middle
+exclude: true
 
 .center[.image-100[![](img/timp2.png)]]
 
@@ -138,6 +140,7 @@ Gene expression **hyper-variability** enriched in hypo-methylation blocks in oth
 
 ---
 class: middle
+exclude: true
 
 <div class="centered">
 <img src="img/barcode.png" style="max-height: 60%; max-width: 60%"/>
