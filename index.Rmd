@@ -34,6 +34,7 @@ VIZBI '17: June 14, 2017
 
 ---
 class: split-50
+exclude: true
 
 ## What does my group do?
 
@@ -52,7 +53,10 @@ Using **high-throughput** experimental methods
 ```{r child='epiviz.Rmd', eval=FALSE}
 ```
 
-```{r child='reflection.Rmd', eval=TRUE}
+```{r child='reflection.Rmd', eval=FALSE}
+```
+
+```{r child='multiscale.Rmd', eval=TRUE}
 ```
 
 ---
