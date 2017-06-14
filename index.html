@@ -46,9 +46,478 @@ Using **high-throughput** experimental methods
 
 
 
+---
+
+
+## What is epigenomics?
+
+
+.center[.image-60[![](img/epi1.png)]]
+
+
+Genes are **expressed** differently during different **stages** and in different **tissues**.
+
+???
+
+- Something that we want to understand is how that genetic variation leads to phenotypic variation.
+- A major part of understanding that, comes from understanding how regulation works.
+
+---
+class: split-50, middle
+
+## What is epigenomics?
+
+.column[
+DNA methylation is a chemical modification of DNA, involved in *gene expression* regulation.
+]
+
+.column[
+.center[.image-30[![](img/epi4.png)]]
+]
+
+.source[[Robertson and Wolffe, Nat Rev Genet, 2000]]
+
+???
+
+- DNA methylation plays a major role in this regulation process
+- Plus, we know how it is inherited from cell to cell, cell-fate
+- invovled in differentiation
+- can give us an important idea of this process in development and disease
+- plasticity
+
+---
+
+## Probing DNA methylation
+
+.center[
+.image-100[![](img/meth_pileup.png)]
+]
+
+---
+class: split-50, middle
+
+## Probing DNA methylation
+
+.column[
+.image-90[![](img/measure_meth.png)]
+]
+
+.column[
+- local-likelihood smoothing method
+- **high-frequency smoothing** estimates local methylation structure (small domains)
+- **low-frequency smoothing** estimates long-range methylation structure (large domains)
+]
+
+.source[[Nature Genetics, 2011]  
+[Bioinformatics, 2013]
+]
+
+---
+
+## DNA methylation in cancer
+
+.center[.image-90[![](img/block.png)]]
+
+Large blocks of **hypo-methylation** in colon cancer
+
+- consistent partially methylated in normal tissues
+- cancer levels are inconsistent, boundaries conserved across samples
+- overlaps with other important genomic domains
+- genes within these blocks are **tissue-specific**
+
+.source[[Nat. Genetics, 2011]]
+
+---
+class: middle
+exclude: true
+
+.center[.image-90[![](img/timp1.png)]]
+
+**Hypo-methylation** blocks observed across five solid tumor types.
+
+.source[[Genome Medicine, 2014]]
+
+---
+class: middle
+
+.center[.image-70[![](img/antiprofile.png)]]
+
+
+Genes with **hyper-variable** expression in colon cancer are enriched within these blocks.
+
+.source[[Nat. Genetics, 2011]]
+
+---
+class: middle
+exclude: true
+
+.center[.image-100[![](img/timp2.png)]]
+
+Gene expression **hyper-variability** enriched in hypo-methylation blocks in other cancer types.
+
+.source[[Genome Medicine, 2014]]
+
+---
+class: middle
+exclude: true
+
+&lt;div class="centered"&gt;
+&lt;img src="img/barcode.png" style="max-height: 60%; max-width: 60%"/&gt;
+&lt;img src="img/barcode2.png" style="max-height: 35%; max-width: 35%"/&gt;
+&lt;/div&gt;
+
+Genes with **consistent hyper-variable expression** across tumors are _tissue-specific_.
+
+.source[[BMC Bioinformatics, 2013]]
+
+---
+
+## Summary
+
+- large domains of methylation loss are a stable mark across cancer types
+
+--
+- gene expression hyper-variability is enriched within these domains
+
+--
+- hyper-variable genes within these regions are tissue-specific and involved in cellular fate
 
 
 
+
+---
+class: split-50
+
+## Software for statistical analysis
+
+.column[
+State-of-the-art computational and statistical analysis
+platform  
+
+We develop and apply methods for these analyses in this platform  
+
+Our collaborators do analysis in this platform with us
+
+.image-30[![](img/rbioc.png)]
+
+]
+
+.column[
+.center[
+`bsseq`  
+`minfi`  
+`bumphunter`  
+`antiProfiles`    
+`missMethyl`  
+`BiSeq`  
+`DMRcate`  
+]
+]
+
+.source[http://bioconductor.org]
+
+---
+
+### Exploratory and collaborative analysis
+
+- *Data transformation and modeling*: data smoothing, region finding
+(R/Bioconductor: `bsseq`, `minfi`)
+
+--
+
+- *Exploration*: search by gene, search by overlap
+
+--
+
+- *Contextual analysis*: overlap with other data (our own, other labs, UCSC, ensembl)
+
+---
+
+## Genomic Data Science  
+
+- We have unprecedented ability to measure
+- and lots of publicly available data to contextualize it
+
+.center[
+&lt;img src="img/hadley.png" style="max-height: 50%; max-width: 50%"/&gt;
+&lt;img src="img/hadley2.png" style="max-height: 30%; max-width: 30%"/&gt;
+]
+
+.source[[H. Wickham]]
+
+---
+
+.center[.image-40[![](img/epiviz_logo_large_white.png)]]
+
+
+### Integrative, visual and computational exploratory analysis of genomic data
+
+- Browser-based
+- Interactive
+- Integration of data
+- Reproducible dissemination
+- Communication with R/Bioconductor: `epivizr` package
+
+e.g.: http://epiviz.cbcb.umd.edu/?ws=YOsu0RmUc9l
+
+.source[[Nat. Methods, 2014]]
+
+---
+exclude: false
+class: center, middle
+
+&lt;iframe src="http://epiviz.cbcb.umd.edu/?ws=clHVLu0BQti" height="100%" width="100%" frameborder="0"&gt;&lt;/iframe&gt;
+
+---
+class: middle
+
+## Creativity in exploration
+
+We are building software applications to support creative exploratory analysis of large genome-wide datasets...
+
+.center[.image-60[![](img/terry.png)]]
+
+.source[[T. Speed]]
+
+---
+class: middle, split-30
+
+### Summarization
+
+.column[
+Summarize integrated measurements (computed on data subsets)
+]
+
+.column[
+.center[
+&lt;video height="450px" controls&gt;
+  &lt;source src="movies/transform_aggregate.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+]
+]
+
+---
+class: middle, split-40
+
+### Statistically-guided exploration
+
+.column[
+Calculate a statistic of interest  
+Interactively explore data based on statistic
+]
+
+.column[
+
+```r
+# Get tumor methylation base-pair data
+m &lt;- assay(se)[,"tumor"]
+
+# Compute regions with highest variability across cpgs
+region_stat &lt;- calcWindowStat(m, step=25, 
+                              window=80, stat=rowSds)
+s &lt;- region_stat[,"stat"]
+
+# get locations in decreasing order
+o &lt;- order(s, decreasing=TRUE)
+indices &lt;- region_stat[o, "indices"]
+slideShowRegions &lt;- rowRanges(se)[indices] + 1250000L
+mgr$slideshow(slideShowRegions)
+```
+]
+
+---
+class: center, middle
+
+&lt;video height="550" controls&gt;
+  &lt;source src="movies/guided_exploration_v2.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+
+---
+class: middle, split-60
+exclude: true
+
+### Dynamically extensible
+
+.column[
+Integrate new data types and add new visualizations.
+
+- Based on classic "three-table" design in genomic data analysis
+- **Data providers define coordinate space**
+]
+
+.column[
+.center[
+&lt;img src="img/datatypes.png" style="max-width=50%; min-width=50%"/&gt;
+]
+]
+
+---
+exclude: true
+&lt;div class="centered"&gt;
+&lt;video height="550" controls&gt;
+  &lt;source src="movies/finance.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+&lt;/div&gt;
+
+---
+class: middle
+
+### Visualization design goals
+
+- Context 
+  - Integrate and align multiple data sources; navigate; search
+  - *Connect*: brushing
+  - *Encode*: map visualization properties to data on the fly
+  - *Reconfigure*: multiple views of the same data
+
+.source[[Perer &amp; Shneiderman]]
+
+---
+class: middle
+
+### Visualization design goals
+
+- Data
+  - *Select and filter*: tight-knit integration with R/Bioconductor; 
+  - (current work) filters on visualization propagate to data environment
+- Model
+  - New 'measurements' the result of modeling; perhaps suggested by data context
+
+.source[[Perer &amp; Shneiderman]]
+
+---
+class: middle
+
+.center[
+&lt;img src="img/hadley.png" style="max-height: 50%; max-width: 50%"/&gt;
+&lt;img src="img/hadley2.png" style="max-height: 30%; max-width: 30%"/&gt;
+]
+
+.source[[H. Wickham]]
+
+Specific challenge for epigenomic data analysis is how to integrate  *many relevant sources of contextual data*
+
+- Easily access/integrate *contextual* data
+- Driven by exploratory analysis of *immediate* data
+- Iterative process
+- Visual and computational exploration go hand in hand
+
+
+
+
+---
+
+## Lessons Learned
+
+### R/Bioconductor connection is a real success
+
+- Fully scriptable UI  
+  - interactive viz weaved with statistical analysis
+  - _Reproducible_? (_Reconstructable_, really)
+  
+- Integrate interactive visualization as part of literate
+  programming with Rmarkdown
+  
+- Bioconductor community as a resource: **think about role of interactive visualization in day to day data analysis**
+  
+---
+class: split-60, middle
+
+## Survey the community
+
+### Online Bioconductor community survey
+
+.column[
+- 65 respondents  
+- Mostly expert level users and developers
+- Data analyst rather than Biomedical scientist
+]
+
+.column[
+.image-40[![](img/tweet.png)]
+]
+
+About half has used interactive visualization previously  
+Predominantly through shiny: https://shiny.rstudio.com
+
+
+---
+
+### Issues faced creating interactive visualizations
+
+
+
+
+
+&lt;img src="index_files/figure-html/plot_q26-1.png" width="1056" /&gt;
+
+---
+
+### Would like to see in genomic interactive visualization platform
+
+
+
+&lt;table class=survey_table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; response &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; num. respondents &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; The interactive visualization tool should be a very flexible and extendable system that I can use to develop and create customized workflows. &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 26 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; I would use the interactive tool as a standalone application that would quickly let me load, visualize and analyze data. As an end user, I am mostly interested in the usability of the application. &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 14 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; I don't know &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+## Takeaways
+
+- Authoring, extensibility, infrastructure
+- Collaboration within teams
+- Interactive publishing and deposition
+
+---
+class: split-50
+
+## Epiviz components (in development)
+
+Drop in epiviz visualization components
+
+.column[
+- Connected to either webserver or local R environment
+- Can be embedded into HTML
+- Reusable components
+]
+
+.column[
+```html
+&lt;head&gt;
+&lt;link rel="import" href="epiviz-charts"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+...
+&lt;epiviz-navigation chr="chr6" ...&gt;
+  &lt;epiviz-genes-track ...&gt;
+  &lt;epiviz-scatter-plot x="cancer" y="normal"&gt;
+&lt;/epiviz-navigation
+&lt;/body&gt;
+```
+]
+
+.footer[http://github.com/epiviz/epiviz-chart]
 
 
 
@@ -60,7 +529,7 @@ class: split-30, middle
 .column[
 Different smoothing _bandwidth_ leads to different inferences (block width)
 
-_Bandwitdh_ reflects distinct _genomic scale_
+_Bandwidth_ reflects distinct _genomic scale_
 
 _Genomic scale_ reflects (likely) distinct _gene regulatory mechanisms_
 ]
@@ -78,7 +547,7 @@ class: split-30, middle
 .column[
 Different smoothing _bandwidth_ leads to different inferences (block width)
 
-_Bandwitdh_ reflects distinct _genomic scale_
+_Bandwidth_ reflects distinct _genomic scale_
 
 _Genomic scale_ reflects (likely) _distinct gene regulatory mechanisms_
 ]
@@ -96,7 +565,7 @@ class: split-30, middle
 .column[
 Different smoothing _bandwidth_ leads to different inferences (block width)
 
-_Bandwitdh_ reflects distinct _genomic scale_
+_Bandwidth_ reflects distinct _genomic scale_
 
 _Genomic scale_ reflects (likely) _distinct gene regulatory mechanisms_
 ]
@@ -107,18 +576,34 @@ _Genomic scale_ reflects (likely) _distinct gene regulatory mechanisms_
 
 ---
 
+## Perspectives
+
+- Collaborative computational and visual analysis
+
+--
+- Effective visual methods to explore hierarchical organization of (epi)-genome
+
+--
+- Deeper integration of statistically-informed visualization
+
+--
+- Visualization-informed statistical analysis
+
+---
+
 **Acknowledgements**  
 
-Justin Wagner, Jayaram Kancherla (CBCB)    
-Florin Chelaru (now at Google), Joseph Paulson (now at Genentech)  
+Florin Chelaru (now at Google)  
+Justin Wagner, Jayaram Kancherla (CBCB), Joseph Paulson (now at Genentech)  
 Feinberg Lab &amp; K. Hansen (JHU), R. Irizarry (Harvard)
 
 Funding: NIH, Genentech, Gates Foundation  
 
 **More information**
 
-[http://hcbravo.org](http://hcbravo.org)  
-[\@hcorrada](https://twitter.com/hcorrada)
+http://epiviz.org  
+http://hcbravo.org  
+[@hcorrada](https://twitter.com/hcorrada)
     </textarea>
 <script src="libs/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({

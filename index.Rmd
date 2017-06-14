@@ -47,13 +47,13 @@ Using **high-throughput** experimental methods
 
 .column[.image-80[![](img/stickmen.png)]]
 
-```{r child='epigenomics.Rmd', eval=FALSE}
+```{r child='epigenomics.Rmd', eval=TRUE}
 ```
 
-```{r child='epiviz.Rmd', eval=FALSE}
+```{r child='epiviz.Rmd', eval=TRUE}
 ```
 
-```{r child='reflection.Rmd', eval=FALSE}
+```{r child='reflection.Rmd', eval=TRUE}
 ```
 
 ```{r child='multiscale.Rmd', eval=TRUE}
@@ -61,18 +61,34 @@ Using **high-throughput** experimental methods
 
 ---
 
+## Perspectives
+
+- Collaborative computational and visual analysis
+
+--
+- Effective visual methods to explore hierarchical organization of (epi)-genome
+
+--
+- Deeper integration of statistically-informed visualization
+
+--
+- Visualization-informed statistical analysis
+
+---
+
 **Acknowledgements**  
 
-Justin Wagner, Jayaram Kancherla (CBCB)    
-Florin Chelaru (now at Google), Joseph Paulson (now at Genentech)  
+Florin Chelaru (now at Google)  
+Justin Wagner, Jayaram Kancherla (CBCB), Joseph Paulson (now at Genentech)  
 Feinberg Lab & K. Hansen (JHU), R. Irizarry (Harvard)
 
 Funding: NIH, Genentech, Gates Foundation  
 
 **More information**
 
-[http://hcbravo.org](http://hcbravo.org)  
-[\@hcorrada](https://twitter.com/hcorrada)    
+http://epiviz.org  
+http://hcbravo.org  
+[@hcorrada](https://twitter.com/hcorrada)    
 
 
 

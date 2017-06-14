@@ -4,7 +4,6 @@
 
 ## What is epigenomics?
 
-.center[.large[What makes them different?]]
 
 .center[.image-60[![](img/epi1.png)]]
 
@@ -62,7 +61,7 @@ class: split-50, middle
 - **low-frequency smoothing** estimates long-range methylation structure (large domains)
 ]
 
-.source[[Nature Genetics, 2011]\br
+.source[[Nature Genetics, 2011]  
 [Bioinformatics, 2013]
 ]
 
@@ -70,7 +69,7 @@ class: split-50, middle
 
 ## DNA methylation in cancer
 
-.center[.image-100[![](img/block.png)]]
+.center[.image-90[![](img/block.png)]]
 
 Large blocks of **hypo-methylation** in colon cancer
 
@@ -85,7 +84,7 @@ Large blocks of **hypo-methylation** in colon cancer
 class: middle
 exclude: true
 
-.center[.image-100[![](img/timp1.png)]]
+.center[.image-90[![](img/timp1.png)]]
 
 **Hypo-methylation** blocks observed across five solid tumor types.
 
@@ -94,7 +93,7 @@ exclude: true
 ---
 class: middle
 
-.center[.image-80[![](img/antiprofile.png)]]
+.center[.image-70[![](img/antiprofile.png)]]
 
 
 Genes with **hyper-variable** expression in colon cancer are enriched within these blocks.
@@ -129,6 +128,10 @@ Genes with **consistent hyper-variable expression** across tumors are _tissue-sp
 ## Summary
 
 - large domains of methylation loss are a stable mark across cancer types
+
+--
 - gene expression hyper-variability is enriched within these domains
+
+--
 - hyper-variable genes within these regions are tissue-specific and involved in cellular fate
 

@@ -18,24 +18,24 @@ Our collaborators do analysis in this platform with us
 
 .column[
 .center[
+`bsseq`  
 `minfi`  
 `bumphunter`  
-`antiProfiles`  
-`HTShape`  
-`qsmooth`  
-`metagenomeSeq`  
-`metagenomeFeatures`  
-`Rcplex`  
-`Rcsdp`
+`antiProfiles`    
+`missMethyl`  
+`BiSeq`  
+`DMRcate`  
 ]
 ]
+
+.source[http://bioconductor.org]
 
 ---
 
 ### Exploratory and collaborative analysis
 
 - *Data transformation and modeling*: data smoothing, region finding
-(R/Bioconductor: `Bsmooth`, `minfi`)
+(R/Bioconductor: `bsseq`, `minfi`)
 
 --
 
@@ -77,7 +77,7 @@ e.g.: http://epiviz.cbcb.umd.edu/?ws=YOsu0RmUc9l
 .source[[Nat. Methods, 2014]]
 
 ---
-exclude: true
+exclude: false
 class: center, middle
 
 <iframe src="http://epiviz.cbcb.umd.edu/?ws=clHVLu0BQti" height="100%" width="100%" frameborder="0"></iframe>

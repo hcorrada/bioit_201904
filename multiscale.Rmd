@@ -7,7 +7,7 @@ class: split-30, middle
 .column[
 Different smoothing _bandwidth_ leads to different inferences (block width)
 
-_Bandwitdh_ reflects distinct _genomic scale_
+_Bandwidth_ reflects distinct _genomic scale_
 
 _Genomic scale_ reflects (likely) distinct _gene regulatory mechanisms_
 ]
@@ -25,7 +25,7 @@ class: split-30, middle
 .column[
 Different smoothing _bandwidth_ leads to different inferences (block width)
 
-_Bandwitdh_ reflects distinct _genomic scale_
+_Bandwidth_ reflects distinct _genomic scale_
 
 _Genomic scale_ reflects (likely) _distinct gene regulatory mechanisms_
 ]
@@ -43,7 +43,7 @@ class: split-30, middle
 .column[
 Different smoothing _bandwidth_ leads to different inferences (block width)
 
-_Bandwitdh_ reflects distinct _genomic scale_
+_Bandwidth_ reflects distinct _genomic scale_
 
 _Genomic scale_ reflects (likely) _distinct gene regulatory mechanisms_
 ]
