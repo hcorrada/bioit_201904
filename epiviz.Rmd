@@ -60,6 +60,7 @@ Our collaborators do analysis in this platform with us
 .source[[H. Wickham]]
 
 ---
+exclude: true
 
 .center[.image-40[![](img/epiviz_logo_large_white.png)]]
 
@@ -77,12 +78,32 @@ e.g.: http://epiviz.cbcb.umd.edu/?ws=YOsu0RmUc9l
 .source[[Nat. Methods, 2014]]
 
 ---
-exclude: false
+class: split-50
+
+## Epiviz: Interactive Visualization for Functional Genomics
+
+.column[
+### Separate track-based and non track-based visualization
+
+Data visualizations updated based on user interaction
+
+### Integrated with R/Bioconductor
+]
+
+.column[
+.center.image-40[![](img/epiviz.png)]
+]
+
+.source[[Chelaru et al. 2014, Nat. Methods]()]
+
+---
+exclude: true
 class: center, middle
 
 <iframe src="http://epiviz.cbcb.umd.edu/?ws=clHVLu0BQti" height="100%" width="100%" frameborder="0"></iframe>
 
 ---
+exclude: true
 class: middle
 
 ## Creativity in exploration
@@ -95,6 +116,7 @@ We are building software applications to support creative exploratory analysis o
 
 ---
 class: middle, split-30
+exclude: true
 
 ### Summarization
 

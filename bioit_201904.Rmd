@@ -1,0 +1,107 @@
+---
+params:
+  title: "Computational Steering of Interactive Exploratory Analysis of Genomics Data"
+  author: "Héctor Corrada Bravo"
+  center: "Center for Bioinformatics and Computational Biology"
+  institution: "University of Maryland, College Park, USA"
+  venue: "BioIT-World 2019"
+css: ["custom.css"]
+output: 
+  xaringan::moon_reader:
+    lib_dir: libs
+    seal: false
+    includes:
+      after_body: "custom.html"
+    nature:
+      ratio: "16:9"
+---
+
+```{r, echo=FALSE}
+knitr::opts_chunk$set(cache=TRUE)
+
+pretty_today <- function() { pretty_date(Sys.Date()) }
+pretty_date <- function(date) {
+  format(date, "%d %B %Y") 
+}
+```
+
+class: title-slide, center, middle
+count: false
+
+.banner[![](epiviz.png)]
+
+.title[`r params$title`]
+
+.author[`r params$author`]  
+.other-info[@hcorrada]
+
+.other-info[
+`r params$center`  
+`r params$institution`  
+`r params$venue`, `r pretty_today()`
+]
+
+.logo[![](logo.png)]
+
+---
+class: split-50
+exclude: true
+
+## What does my group do?
+
+.column[
+Study the **molecular** basis of *variation* in development and disease
+
+
+Using **high-throughput** experimental methods  
+]
+
+.column[.image-80[![](img/stickmen.png)]]
+
+```{r child='epigenomics.Rmd', eval=TRUE}
+```
+
+```{r child='epiviz.Rmd', eval=TRUE}
+```
+
+```{r child='reflection.Rmd', eval=TRUE}
+```
+
+```{r child='feed.Rmd', eval=TRUE}
+```
+
+---
+layout: false
+
+## Perspectives
+
+- Tight-knit integration of computational and visual analysis
+
+--
+- Use proactive computation to _steer_ data exploration
+
+--
+- Deeper integration of statistically-informed visualization
+
+---
+
+**Acknowledgements**  
+
+Jayaram Kancherla (CBCB), Zhe Cui (CBCB)
+
+Florin Chelaru (Google), Justin Wagner (NIST)    
+Feinberg Lab & K. Hansen (JHU), R. Irizarry (Harvard)
+
+Funding: NIH, Genentech, Gates Foundation  
+
+**More information**
+
+http://epiviz.org  
+http://hcbravo.org  
+[@hcorrada](https://twitter.com/hcorrada)    
+
+
+
+
+
+

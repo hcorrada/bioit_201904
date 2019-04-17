@@ -1,9 +1,10 @@
 
 ---
-
+layout: true
 
 ## What is epigenomics?
 
+---
 
 .center[.image-60[![](img/epi1.png)]]
 
@@ -17,8 +18,6 @@ Genes are **expressed** differently during different **stages** and in different
 
 ---
 class: split-50, middle
-
-## What is epigenomics?
 
 .column[
 DNA methylation is a chemical modification of DNA, involved in *gene expression* regulation.
@@ -39,6 +38,7 @@ DNA methylation is a chemical modification of DNA, involved in *gene expression*
 - plasticity
 
 ---
+layout: false
 
 ## Probing DNA methylation
 
@@ -69,7 +69,7 @@ class: split-50, middle
 
 ## DNA methylation in cancer
 
-.center[.image-90[![](img/block.png)]]
+.center[.image-80[![](img/block.png)]]
 
 Large blocks of **hypo-methylation** in colon cancer
 
@@ -82,7 +82,7 @@ Large blocks of **hypo-methylation** in colon cancer
 
 ---
 class: middle
-exclude: true
+exclude: false
 
 .center[.image-90[![](img/timp1.png)]]
 
@@ -91,6 +91,7 @@ exclude: true
 .source[[Genome Medicine, 2014]]
 
 ---
+exclude: true
 class: middle
 
 .center[.image-70[![](img/antiprofile.png)]]
@@ -102,11 +103,11 @@ Genes with **hyper-variable** expression in colon cancer are enriched within the
 
 ---
 class: middle
-exclude: true
+exclude: false
 
-.center[.image-100[![](img/timp2.png)]]
+.center[.image-70[![](img/timp2.png)]]
 
-Gene expression **hyper-variability** enriched in hypo-methylation blocks in other cancer types.
+Gene expression **hyper-variability** enriched in hypo-methylation blocks in different cancer types.
 
 .source[[Genome Medicine, 2014]]
 
@@ -124,14 +125,16 @@ Genes with **consistent hyper-variable expression** across tumors are _tissue-sp
 .source[[BMC Bioinformatics, 2013]]
 
 ---
-
+exclude: true
 ## Summary
 
 - large domains of methylation loss are a stable mark across cancer types
 
 --
+exclude: true
 - gene expression hyper-variability is enriched within these domains
 
 --
+exclude: true
 - hyper-variable genes within these regions are tissue-specific and involved in cellular fate
 

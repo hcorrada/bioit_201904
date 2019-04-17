@@ -19,27 +19,27 @@ class: split-60, middle
 
 ## Survey the community
 
-### Online Bioconductor community survey
-
 .column[
 - 65 respondents  
 - Mostly expert level users and developers
-- Data analyst rather than Biomedical scientist
+- Data analyst rather than Biomedical Scientists
+
+About half has used interactive visualization previously  
+Predominantly through shiny: https://shiny.rstudio.com
+
 ]
 
 .column[
 .image-40[![](img/tweet.png)]
 ]
 
-About half has used interactive visualization previously  
-Predominantly through shiny: https://shiny.rstudio.com
 
 
 ---
 
 ### Issues faced creating interactive visualizations
 
-```{r echo=FALSE}
+```{r echo=FALSE, message=FALSE}
 library(tidyverse)
 library(forcats)
 
@@ -69,6 +69,7 @@ q26_data %>%
 ```
 
 ---
+exclude: true
 
 ### Would like to see in genomic interactive visualization platform
 
@@ -85,10 +86,12 @@ q23_data %>%
   arrange(desc(value)) %>%
   select(value, n) %>%
   knitr::kable('html', col.names=c("response", "num. respondents"),
-               table.attr="class=survey_table")
+               table.attr="class=survey_table") %>%
+  kableExtra::kable_styling(bootstrap_options=c("condensed"))
 ```
 
 ---
+exclude: true
 
 ## Takeaways
 
@@ -99,30 +102,89 @@ q23_data %>%
 ---
 class: split-50
 
-## Epiviz components (in development)
-
-Drop in epiviz visualization components
+## Epiviz Web Components
 
 .column[
+Drop in epiviz visualization components
+
 - Connected to either webserver or local R environment
 - Can be embedded into HTML
 - Reusable components
+
+.source[https://f1000research.com/articles/7-1096/v1]
 ]
 
 .column[
-```html
-<head>
-<link rel="import" href="epiviz-charts">
-</head>
+.center.image-50[![](img/component.png)]
 
-<body>
-...
-<epiviz-navigation chr="chr6" ...>
-  <epiviz-genes-track ...>
-  <epiviz-scatter-plot x="cancer" y="normal">
-</epiviz-navigation
-</body>
+]
+
+---
+class: split-50
+
+## Epiviz File Server
+
+
+.column[
+- Query genomic data _in-situ_
+]
+
+.column[
+```json
+  {
+    url: "https://egg2.wustl.edu/roadmap/data/byFileType/signal/consolidated/macs2signal/foldChange/E079-H3K27me3.fc.signal.bigwig",
+    file_type: "bigwig",
+    datatype: "bp",
+    name: "E079-H3K27me3",
+    annotation: {
+        group: "digestive",
+        tissue: "Esophagus",
+        marker: "H3K27me3"
+    }
+  },
 ```
 ]
 
-.footer[http://github.com/epiviz/epiviz-chart]
+---
+class: split-50
+
+## Epiviz File Server
+
+
+.column[
+- Query genomic data _in-situ_
+- Compute over _in-situ_ data
+]
+
+.column[
+```python
+import numpy
+mMgr.add_computed_measurement(
+  "ChipSeq average digestive tissue", 
+  file_measurements, 
+  computeFunc=numpy.mean)
+```
+]
+
+---
+class: split-50
+
+## Epiviz File Server
+
+
+.column[
+- Query genomic data _in-situ_
+- Compute over _in-situ_ data
+- Drop-in visualization components (still cleaning this up)
+]
+
+.column[
+```python
+from IPython.display import HTML
+
+HTML("<epiviz-line-track dim-s=['ChipSeq_avg_digestive'] json-data='" + ujson.dumps(resp.json()["data"]) + "'></epiviz-line-track>")
+```
+]
+
+.center.image-100[![](img/vizFileServer.png)]
+.source[https://epiviz.github.io/post/2019-02-04-epiviz-fileserver/]

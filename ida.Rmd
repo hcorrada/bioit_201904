@@ -1,0 +1,72 @@
+
+---
+layout: true
+
+## Interactive Data Analysis
+
+---
+class: split-50
+
+.column[
+In general, how do we support interactive data analysis?
+
+Workflow construction: keep pieces small, we like to do that for _reusability_, now let's do it for _data reflection_.
+
+What is the "sufficient statistic" my tool produces that a user can interact with?
+]
+
+.column[
+.center.image-40[![](img/tukey.png)]
+]
+
+---
+exclude: true
+class: split-40
+
+.column[
+One example: segment-based analysis of RNA-seq data
+
+Transcript quantification as sufficient statistic? 
+]
+
+.column[
+.center.image-40[![](img/yanagi_workflow.png)]
+]
+
+---
+exclude: true
+class: split-40
+
+.column[
+One example: segment-based analysis of RNA-seq data
+
+**No**. There is (pseudo)-counting, and there is quantification.
+
+Can we produce a "sufficient statistic" we can interact with _before_ quantification.
+]
+
+.column[
+.center.image-40[![](img/yanagi_workflow.png)]
+]
+
+---
+exclude: true
+class: split-40
+
+.column[
+One example: segment-based analysis of RNA-seq data
+
+Segment-counts as the "sufficient statistic"
+
+.source[Gunady et al. Yanagi (2018) biorxiv]
+]
+
+.column[
+.center.image-60[![](img/yanagi_vis.png)]
+]
+
+---
+exclude: true
+.center.image-90[![](img/yanagi.gif)]
+
+

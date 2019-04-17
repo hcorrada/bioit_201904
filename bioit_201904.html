@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>bioit_201904.utf8.md</title>
+    <meta charset="utf-8">
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <script src="libs/kePrint-0.0.1/kePrint.js"></script>
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+class: title-slide, center, middle
+count: false
+
+.banner[![](epiviz.png)]
+
+.title[Computational Steering of Interactive Exploratory Analysis of Genomics Data]
+
+.author[Héctor Corrada Bravo]  
+.other-info[@hcorrada]
+
+.other-info[
+Center for Bioinformatics and Computational Biology  
+University of Maryland, College Park, USA  
+BioIT-World 2019, 17 April 2019
+]
+
+.logo[![](logo.png)]
+
+---
+class: split-50
+exclude: true
+
+## What does my group do?
+
+.column[
+Study the **molecular** basis of *variation* in development and disease
+
+
+Using **high-throughput** experimental methods  
+]
+
+.column[.image-80[![](img/stickmen.png)]]
+
+
+
+---
+layout: true
+
+## What is epigenomics?
+
+---
+
+.center[.image-60[![](img/epi1.png)]]
+
+
+Genes are **expressed** differently during different **stages** and in different **tissues**.
+
+???
+
+- Something that we want to understand is how that genetic variation leads to phenotypic variation.
+- A major part of understanding that, comes from understanding how regulation works.
+
+---
+class: split-50, middle
+
+.column[
+DNA methylation is a chemical modification of DNA, involved in *gene expression* regulation.
+]
+
+.column[
+.center[.image-30[![](img/epi4.png)]]
+]
+
+.source[[Robertson and Wolffe, Nat Rev Genet, 2000]]
+
+???
+
+- DNA methylation plays a major role in this regulation process
+- Plus, we know how it is inherited from cell to cell, cell-fate
+- invovled in differentiation
+- can give us an important idea of this process in development and disease
+- plasticity
+
+---
+layout: false
+
+## Probing DNA methylation
+
+.center[
+.image-100[![](img/meth_pileup.png)]
+]
+
+---
+class: split-50, middle
+
+## Probing DNA methylation
+
+.column[
+.image-90[![](img/measure_meth.png)]
+]
+
+.column[
+- local-likelihood smoothing method
+- **high-frequency smoothing** estimates local methylation structure (small domains)
+- **low-frequency smoothing** estimates long-range methylation structure (large domains)
+]
+
+.source[[Nature Genetics, 2011]  
+[Bioinformatics, 2013]
+]
+
+---
+
+## DNA methylation in cancer
+
+.center[.image-80[![](img/block.png)]]
+
+Large blocks of **hypo-methylation** in colon cancer
+
+- consistent partially methylated in normal tissues
+- cancer levels are inconsistent, boundaries conserved across samples
+- overlaps with other important genomic domains
+- genes within these blocks are **tissue-specific**
+
+.source[[Nat. Genetics, 2011]]
+
+---
+class: middle
+exclude: false
+
+.center[.image-90[![](img/timp1.png)]]
+
+**Hypo-methylation** blocks observed across five solid tumor types.
+
+.source[[Genome Medicine, 2014]]
+
+---
+exclude: true
+class: middle
+
+.center[.image-70[![](img/antiprofile.png)]]
+
+
+Genes with **hyper-variable** expression in colon cancer are enriched within these blocks.
+
+.source[[Nat. Genetics, 2011]]
+
+---
+class: middle
+exclude: false
+
+.center[.image-70[![](img/timp2.png)]]
+
+Gene expression **hyper-variability** enriched in hypo-methylation blocks in different cancer types.
+
+.source[[Genome Medicine, 2014]]
+
+---
+class: middle
+exclude: true
+
+&lt;div class="centered"&gt;
+&lt;img src="img/barcode.png" style="max-height: 60%; max-width: 60%"/&gt;
+&lt;img src="img/barcode2.png" style="max-height: 35%; max-width: 35%"/&gt;
+&lt;/div&gt;
+
+Genes with **consistent hyper-variable expression** across tumors are _tissue-specific_.
+
+.source[[BMC Bioinformatics, 2013]]
+
+---
+exclude: true
+## Summary
+
+- large domains of methylation loss are a stable mark across cancer types
+
+--
+exclude: true
+- gene expression hyper-variability is enriched within these domains
+
+--
+exclude: true
+- hyper-variable genes within these regions are tissue-specific and involved in cellular fate
+
+
+
+
+---
+class: split-50
+
+## Software for statistical analysis
+
+.column[
+State-of-the-art computational and statistical analysis
+platform  
+
+We develop and apply methods for these analyses in this platform  
+
+Our collaborators do analysis in this platform with us
+
+.image-30[![](img/rbioc.png)]
+
+]
+
+.column[
+.center[
+`bsseq`  
+`minfi`  
+`bumphunter`  
+`antiProfiles`    
+`missMethyl`  
+`BiSeq`  
+`DMRcate`  
+]
+]
+
+.source[http://bioconductor.org]
+
+---
+
+### Exploratory and collaborative analysis
+
+- *Data transformation and modeling*: data smoothing, region finding
+(R/Bioconductor: `bsseq`, `minfi`)
+
+--
+
+- *Exploration*: search by gene, search by overlap
+
+--
+
+- *Contextual analysis*: overlap with other data (our own, other labs, UCSC, ensembl)
+
+---
+
+## Genomic Data Science  
+
+- We have unprecedented ability to measure
+- and lots of publicly available data to contextualize it
+
+.center[
+&lt;img src="img/hadley.png" style="max-height: 50%; max-width: 50%"/&gt;
+&lt;img src="img/hadley2.png" style="max-height: 30%; max-width: 30%"/&gt;
+]
+
+.source[[H. Wickham]]
+
+---
+exclude: true
+
+.center[.image-40[![](img/epiviz_logo_large_white.png)]]
+
+
+### Integrative, visual and computational exploratory analysis of genomic data
+
+- Browser-based
+- Interactive
+- Integration of data
+- Reproducible dissemination
+- Communication with R/Bioconductor: `epivizr` package
+
+e.g.: http://epiviz.cbcb.umd.edu/?ws=YOsu0RmUc9l
+
+.source[[Nat. Methods, 2014]]
+
+---
+class: split-50
+
+## Epiviz: Interactive Visualization for Functional Genomics
+
+.column[
+### Separate track-based and non track-based visualization
+
+Data visualizations updated based on user interaction
+
+### Integrated with R/Bioconductor
+]
+
+.column[
+.center.image-40[![](img/epiviz.png)]
+]
+
+.source[[Chelaru et al. 2014, Nat. Methods]()]
+
+---
+exclude: true
+class: center, middle
+
+&lt;iframe src="http://epiviz.cbcb.umd.edu/?ws=clHVLu0BQti" height="100%" width="100%" frameborder="0"&gt;&lt;/iframe&gt;
+
+---
+exclude: true
+class: middle
+
+## Creativity in exploration
+
+We are building software applications to support creative exploratory analysis of large genome-wide datasets...
+
+.center[.image-60[![](img/terry.png)]]
+
+.source[[T. Speed]]
+
+---
+class: middle, split-30
+exclude: true
+
+### Summarization
+
+.column[
+Summarize integrated measurements (computed on data subsets)
+]
+
+.column[
+.center[
+&lt;video height="450px" controls&gt;
+  &lt;source src="movies/transform_aggregate.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+]
+]
+
+---
+class: middle, split-40
+
+### Statistically-guided exploration
+
+.column[
+Calculate a statistic of interest  
+Interactively explore data based on statistic
+]
+
+.column[
+
+```r
+# Get tumor methylation base-pair data
+m &lt;- assay(se)[,"tumor"]
+
+# Compute regions with highest variability across cpgs
+region_stat &lt;- calcWindowStat(m, step=25, 
+                              window=80, stat=rowSds)
+s &lt;- region_stat[,"stat"]
+
+# get locations in decreasing order
+o &lt;- order(s, decreasing=TRUE)
+indices &lt;- region_stat[o, "indices"]
+slideShowRegions &lt;- rowRanges(se)[indices] + 1250000L
+mgr$slideshow(slideShowRegions)
+```
+]
+
+---
+class: center, middle
+
+&lt;video height="550" controls&gt;
+  &lt;source src="movies/guided_exploration_v2.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+
+---
+class: middle, split-60
+exclude: true
+
+### Dynamically extensible
+
+.column[
+Integrate new data types and add new visualizations.
+
+- Based on classic "three-table" design in genomic data analysis
+- **Data providers define coordinate space**
+]
+
+.column[
+.center[
+&lt;img src="img/datatypes.png" style="max-width=50%; min-width=50%"/&gt;
+]
+]
+
+---
+exclude: true
+&lt;div class="centered"&gt;
+&lt;video height="550" controls&gt;
+  &lt;source src="movies/finance.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+&lt;/div&gt;
+
+---
+class: middle
+
+### Visualization design goals
+
+- Context 
+  - Integrate and align multiple data sources; navigate; search
+  - *Connect*: brushing
+  - *Encode*: map visualization properties to data on the fly
+  - *Reconfigure*: multiple views of the same data
+
+.source[[Perer &amp; Shneiderman]]
+
+---
+class: middle
+
+### Visualization design goals
+
+- Data
+  - *Select and filter*: tight-knit integration with R/Bioconductor; 
+  - (current work) filters on visualization propagate to data environment
+- Model
+  - New 'measurements' the result of modeling; perhaps suggested by data context
+
+.source[[Perer &amp; Shneiderman]]
+
+---
+class: middle
+
+.center[
+&lt;img src="img/hadley.png" style="max-height: 50%; max-width: 50%"/&gt;
+&lt;img src="img/hadley2.png" style="max-height: 30%; max-width: 30%"/&gt;
+]
+
+.source[[H. Wickham]]
+
+Specific challenge for epigenomic data analysis is how to integrate  *many relevant sources of contextual data*
+
+- Easily access/integrate *contextual* data
+- Driven by exploratory analysis of *immediate* data
+- Iterative process
+- Visual and computational exploration go hand in hand
+
+
+
+
+---
+
+## Lessons Learned
+
+### R/Bioconductor connection is a real success
+
+- Fully scriptable UI  
+  - interactive viz weaved with statistical analysis
+  - _Reproducible_? (_Reconstructable_, really)
+  
+- Integrate interactive visualization as part of literate
+  programming with Rmarkdown
+  
+- Bioconductor community as a resource: **think about role of interactive visualization in day to day data analysis**
+  
+---
+class: split-60, middle
+
+## Survey the community
+
+.column[
+- 65 respondents  
+- Mostly expert level users and developers
+- Data analyst rather than Biomedical Scientists
+
+About half has used interactive visualization previously  
+Predominantly through shiny: https://shiny.rstudio.com
+
+]
+
+.column[
+.image-40[![](img/tweet.png)]
+]
+
+
+
+---
+
+### Issues faced creating interactive visualizations
+
+
+
+
+
+![](bioit_201904_files/figure-html/plot_q26-1.png)&lt;!-- --&gt;
+
+---
+exclude: true
+
+### Would like to see in genomic interactive visualization platform
+
+
+
+&lt;table class="survey_table table table-condensed" style="margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; response &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; num. respondents &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; The interactive visualization tool should be a very flexible and extendable system that I can use to develop and create customized workflows. &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 26 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; I would use the interactive tool as a standalone application that would quickly let me load, visualize and analyze data. As an end user, I am mostly interested in the usability of the application. &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 14 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; I don't know &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+exclude: true
+
+## Takeaways
+
+- Authoring, extensibility, infrastructure
+- Collaboration within teams
+- Interactive publishing and deposition
+
+---
+class: split-50
+
+## Epiviz Web Components
+
+.column[
+Drop in epiviz visualization components
+
+- Connected to either webserver or local R environment
+- Can be embedded into HTML
+- Reusable components
+
+.source[https://f1000research.com/articles/7-1096/v1]
+]
+
+.column[
+.center.image-50[![](img/component.png)]
+
+]
+
+---
+class: split-50
+
+## Epiviz File Server
+
+
+.column[
+- Query genomic data _in-situ_
+]
+
+.column[
+```json
+  {
+    url: "https://egg2.wustl.edu/roadmap/data/byFileType/signal/consolidated/macs2signal/foldChange/E079-H3K27me3.fc.signal.bigwig",
+    file_type: "bigwig",
+    datatype: "bp",
+    name: "E079-H3K27me3",
+    annotation: {
+        group: "digestive",
+        tissue: "Esophagus",
+        marker: "H3K27me3"
+    }
+  },
+```
+]
+
+---
+class: split-50
+
+## Epiviz File Server
+
+
+.column[
+- Query genomic data _in-situ_
+- Compute over _in-situ_ data
+]
+
+.column[
+```python
+import numpy
+mMgr.add_computed_measurement(
+  "ChipSeq average digestive tissue", 
+  file_measurements, 
+  computeFunc=numpy.mean)
+```
+]
+
+---
+class: split-50
+
+## Epiviz File Server
+
+
+.column[
+- Query genomic data _in-situ_
+- Compute over _in-situ_ data
+- Drop-in visualization components (still cleaning this up)
+]
+
+.column[
+```python
+from IPython.display import HTML
+
+HTML("&lt;epiviz-line-track dim-s=['ChipSeq_avg_digestive'] json-data='" + ujson.dumps(resp.json()["data"]) + "'&gt;&lt;/epiviz-line-track&gt;")
+```
+]
+
+.center.image-100[![](img/vizFileServer.png)]
+.source[https://epiviz.github.io/post/2019-02-04-epiviz-fileserver/]
+
+
+
+---
+layout: false
+class: inverse, center, middle
+
+# Interactive Data Analysis
+
+---
+layout: true
+
+## Statistically guided visualization
+
+---
+class: split-50
+
+.column[
+How can we make the connection between two modes of 
+analysis tighter?
+]
+
+.column[
+.center.image-50[![](img/tukey2.png)]
+]
+
+---
+class: split-50
+
+.column[
+Computational steering of visual exploration via _proactive computation_
+]
+
+.column[
+.center.image-50[![](img/feed.png)]
+]
+
+---
+layout: true
+
+## Statistically guided visualization
+
+---
+exclude: true
+class: split-50
+
+.column[
+Let's revisit the Data Analysis modes
+
+How can we make the connection between two modes of 
+analysis tighter?
+]
+
+.column[
+.center.image-50[![](img/tukey.png)]
+]
+
+---
+exclude: true
+class: split-50
+
+.column[
+One idea: statistically guided visual exploration via _proactive computation_
+
+Back to Epiviz: epigenetic regulation of gene expression across multiple tumor types (Timp et al. 2016)
+]
+
+.column[
+.center.image-50[![](img/feed.png)]
+]
+
+---
+class: split-50
+
+.column[
+Computational steering of visual exploration via _proactive computation_
+
+Analysis runs in background (proactive computation)
+
+"Interesting results" presented to user, steers exploration of data underlying result.
+
+.source[https://github.com/epiviz/epiviz_feed_polymer]
+]
+
+.column[
+.center.image-50[![](img/feed.png)]
+]
+
+---
+
+.center[
+&lt;video height="450px" controls&gt;
+  &lt;source src="movies/epiviz-feed.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+]
+
+
+
+
+---
+layout: false
+
+## Perspectives
+
+- Tight-knit integration of computational and visual analysis
+
+--
+- Use proactive computation to _steer_ data exploration
+
+--
+- Deeper integration of statistically-informed visualization
+
+---
+
+**Acknowledgements**  
+
+Jayaram Kancherla (CBCB), Zhe Cui (CBCB)
+
+Florin Chelaru (Google), Justin Wagner (NIST)    
+Feinberg Lab &amp; K. Hansen (JHU), R. Irizarry (Harvard)
+
+Funding: NIH, Genentech, Gates Foundation  
+
+**More information**
+
+http://epiviz.org  
+http://hcbravo.org  
+[@hcorrada](https://twitter.com/hcorrada)
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+<script>
+remark.macros['scale'] = function (percentage) {
+  var url = this;
+  return '<img src="' + url + '" style=width: ' + percentage + '"/>';
+};
+</script>
+
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+})();
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
